@@ -55,9 +55,7 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
- 
 }
-
 
 @layer base {
   * {
@@ -67,7 +65,6 @@
     @apply bg-background text-foreground;
   }
 }
-
 
 @utility container {
   margin-inline: auto;

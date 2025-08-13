@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 export const Navbar = () => {
   return (
-    <nav className="-translate-x-1/2 fixed top-3 left-1/2 mx-auto min-w-3xl">
+    <nav className="-translate-x-1/2 fixed top-3 left-1/2 z-999 mx-auto min-w-3xl">
       <div className="flex items-center justify-between rounded-lg border border-white bg-background/80 p-1.5 backdrop-blur-2xl">
         <Link className="flex items-center gap-2" href="/">
           <Logo />
