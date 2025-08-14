@@ -103,7 +103,7 @@ export const Footer = () => {
               <li>
                 <Link
                   className="rounded transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                  href="/services"
+                  href="/what-we-offer"
                 >
                   What we offer
                 </Link>
@@ -125,7 +125,15 @@ export const Footer = () => {
               <li>
                 <Link
                   className="rounded transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                  href="/clients"
+                  href="/about"
+                >
+                  About us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="rounded transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                  href="/about#clients"
                 >
                   Clients
                 </Link>
@@ -174,7 +182,7 @@ export const Footer = () => {
                 <a
                   aria-label="Email us at info@directls.ae"
                   className="rounded transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                  href="mailto:info@directls.ae"
+                  href="mailto:sales@directls.ae"
                 >
                   sales@directls.ae
                 </a>

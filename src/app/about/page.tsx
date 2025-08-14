@@ -1,18 +1,21 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Cta } from "@/components/global/cta";
 import { Faq } from "@/components/global/faq";
 import { SectionHeader } from "@/components/layout/section-header";
 import { Badge, BadgeDot } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { BackgroundLeft, BackgroundRight } from "@/assets/background";
+import { IconUser } from "@/assets/icons/visions";
 
 import { CLIENTS, COMPANY_VALUES, MISSION_ITEMS, VISION_ITEMS } from "@/data/constant";
 
 export const metadata: Metadata = {
-  title: "About Direct Logic Systems | Empowering Businesses Since 1978",
+  title: "About Direct Logic Systems - Empowering Businesses Since 1978",
   description:
     "Direct Logic Systems LLC (DLS) has been a trusted IT partner for over 45 years. We provide end-to-end IT services, trading solutions, and digital innovations in Dubai, UAE.",
   keywords: [
@@ -27,7 +30,7 @@ export const metadata: Metadata = {
     "business technology solutions",
   ],
   openGraph: {
-    title: "About Direct Logic Systems | Empowering Businesses Since 1978",
+    title: "About Direct Logic Systems - Empowering Businesses Since 1978",
     description:
       "Direct Logic Systems LLC (DLS) has been a trusted IT partner for over 45 years. We provide end-to-end IT services, trading solutions, and digital innovations in Dubai, UAE.",
     type: "website",
@@ -36,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Direct Logic Systems | Empowering Businesses Since 1978",
+    title: "About Direct Logic Systems - Empowering Businesses Since 1978",
     description:
       "Direct Logic Systems LLC (DLS) has been a trusted IT partner for over 45 years. We provide end-to-end IT services, trading solutions, and digital innovations in Dubai, UAE.",
   },
@@ -112,13 +115,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="container max-w-7xl px-4 pt-12 sm:pt-16 lg:pt-20">
+      <section className="container max-w-7xl px-4 pt-12 sm:pt-16 lg:pt-20" id="clients">
         <SectionHeader
           badge="Clients"
           description="Ethics you can count on—anytime, at Direct Logic Systems."
           title="Our satisfied customers"
         />
-        <div className="grid grid-cols-1 gap-8 py-8 text-center sm:gap-12 sm:py-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 py-8 text-center sm:grid-cols-3 sm:gap-8 sm:py-12 md:grid-cols-4 md:gap-12">
           {CLIENTS.map((value) => (
             <div className="relative aspect-video rounded-lg bg-card" key={value.logo}>
               <Image alt="Client" className="object-contain p-6" fill src={value.logo} />
@@ -208,6 +211,79 @@ export default function AboutPage() {
               </ul>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Join Our Team Section */}
+      <section className="container max-w-7xl px-4 py-12 sm:py-16 lg:py-20">
+        <SectionHeader
+          badge="Join Our Team"
+          description="Join a team of passionate innovators who are shaping the future of technology. We're looking for talented individuals who share our vision of empowering businesses through cutting-edge solutions."
+          title="Be Part of Something Extraordinary"
+        />
+
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Card>
+            <CardHeader className="px-1">
+              <div className="flex items-center gap-3">
+                <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10">
+                  <IconUser className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-lg">Innovation Culture</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-balance text-muted-foreground">
+                Work in an environment that encourages creativity, experimentation, and continuous learning. Your ideas
+                matter here.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="px-1">
+              <div className="flex items-center gap-3">
+                <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10">
+                  <IconUser className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-lg">Growth Opportunities</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-balance text-muted-foreground">
+                Advance your career with mentorship programs, skill development, and opportunities to work on
+                cutting-edge technologies.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="px-1">
+              <div className="flex items-center gap-3">
+                <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10">
+                  <IconUser className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-lg">Global Impact</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent className="h-full">
+              <p className="text-muted-foreground">
+                Contribute to solutions that help businesses across the UAE and beyond thrive in the digital age.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="mt-8 text-center">
+          <Button asChild size="lg">
+            <Link href="/careers">Apply Now</Link>
+          </Button>
+          <p className="mt-3 text-muted-foreground text-sm">
+            Don't see a perfect fit? Send us your resume at{" "}
+            <a className="text-primary hover:underline" href="mailto:careers@directls.com">
+              careers@directls.com
+            </a>
+          </p>
         </div>
       </section>
 

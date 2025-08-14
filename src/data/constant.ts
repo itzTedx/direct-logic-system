@@ -227,7 +227,6 @@ export const CLIENTS = [
   {
     logo: "/images/clients/client-13.jpg",
   },
-
   {
     logo: "/images/clients/client-14.jpg",
   },
@@ -248,6 +247,9 @@ export const CLIENTS = [
   },
   {
     logo: "/images/clients/client-20.jpg",
+  },
+  {
+    logo: "/images/clients/client-21.jpg",
   },
   {
     logo: "/images/clients/client-22.jpg",
