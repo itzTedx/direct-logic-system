@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Logo, LogoWordmark } from "@/assets/logo";
+
 import { NAV_LINKS } from "@/data/constant";
 
 import { Button } from "../ui/button";
