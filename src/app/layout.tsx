@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { helvetica } from "@/assets/fonts";
+import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+
+import { helvetica } from "@/assets/fonts";
+
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -20,6 +23,7 @@ export default function RootLayout({
       <body className={cn("antialiased", helvetica.className)}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

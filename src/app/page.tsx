@@ -12,6 +12,7 @@ import { Client1, Client2 } from "@/assets/brands";
 import { IconArrowLeft, IconArrowRight, IconArrowUpRight } from "@/assets/icons/arrows";
 import { IconPlus } from "@/assets/icons/plus";
 import { IconStar } from "@/assets/icons/star";
+import { IconDirectWatermark } from "@/assets/logo";
 
 import { FAQ_ITEMS, SERVICES } from "@/data/constant";
 
@@ -219,6 +220,25 @@ export default function Home() {
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+      </section>
+      <section className="relative mx-6 rounded-b-4xl bg-gradient-to-b from-50% from-white to-50% to-transparent py-20">
+        <div className="container relative inset-shadow-[0_1px_42px_0] inset-shadow-white/25 max-w-7xl space-y-6 overflow-hidden rounded-4xl bg-radial-[at_50%_0%] from-sky-400 to-primary py-20 text-center text-background">
+          <Badge className="relative z-10">
+            <BadgeDot />
+            What we offer
+          </Badge>
+          <h2 className="relative z-10 text-balance font-bold text-5xl leading-snug">
+            Power Your Business with <br />
+            40+ Years of Proven Tech Expertise
+          </h2>
+          <p className="relative z-10 mx-auto max-w-2xl text-balance text-lg leading-relaxed">
+            Your business deserves more than just technology - it deserves the right strategy, execution, and innovation
+            to thrive in a competitive market.
+          </p>
+          <Button>Get know more</Button>
+          <IconDirectWatermark className="-top-1/2 -left-12 absolute text-white/8" />
+          <IconDirectWatermark className="-bottom-1/2 -right-20 -scale-x-90 absolute text-white/8" />
         </div>
       </section>
     </main>
