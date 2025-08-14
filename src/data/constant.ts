@@ -15,8 +15,8 @@ export const NAV_LINKS = [
   },
   {
     id: 3,
-    label: "Company",
-    href: "/company",
+    label: "Portfolio",
+    href: "/portfolio",
   },
 ];
 
@@ -184,5 +184,93 @@ export const VISION_ITEMS = [
     icon: IconChartUp,
     title: "Leadership in IT",
     description: "Grow as a leading IT company, driving progress and efficiency.",
+  },
+];
+
+export const CLIENTS = [
+  {
+    logo: "/images/clients/client-1.jpg",
+  },
+  {
+    logo: "/images/clients/client-2.jpg",
+  },
+  {
+    logo: "/images/clients/client-3.jpg",
+  },
+  {
+    logo: "/images/clients/client-4.jpg",
+  },
+  {
+    logo: "/images/clients/client-5.jpg",
+  },
+  {
+    logo: "/images/clients/client-6.jpg",
+  },
+  {
+    logo: "/images/clients/client-7.jpg",
+  },
+  {
+    logo: "/images/clients/client-8.jpg",
+  },
+  {
+    logo: "/images/clients/client-9.jpg",
+  },
+  {
+    logo: "/images/clients/client-10.jpg",
+  },
+  {
+    logo: "/images/clients/client-11.jpg",
+  },
+  {
+    logo: "/images/clients/client-12.jpg",
+  },
+  {
+    logo: "/images/clients/client-13.jpg",
+  },
+
+  {
+    logo: "/images/clients/client-14.jpg",
+  },
+  {
+    logo: "/images/clients/client-15.jpg",
+  },
+  {
+    logo: "/images/clients/client-16.jpg",
+  },
+  {
+    logo: "/images/clients/client-17.jpg",
+  },
+  {
+    logo: "/images/clients/client-18.jpg",
+  },
+  {
+    logo: "/images/clients/client-19.jpg",
+  },
+  {
+    logo: "/images/clients/client-20.jpg",
+  },
+  {
+    logo: "/images/clients/client-22.jpg",
+  },
+  {
+    logo: "/images/clients/client-23.jpg",
+  },
+  {
+    logo: "/images/clients/client-24.jpg",
+  },
+  {
+    logo: "/images/clients/client-25.jpg",
+  },
+  {
+    logo: "/images/clients/client-26.jpg",
+  },
+  {
+    logo: "/images/clients/client-27.jpg",
+  },
+  {
+    logo: "/images/clients/client-28.jpg",
+  },
+  {
+    logo: "/images/clients/client-29.jpg",
   },
 ];

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
 import { Cta } from "@/components/global/cta";
 import { Faq } from "@/components/global/faq";
@@ -8,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { BackgroundLeft, BackgroundRight } from "@/assets/background";
 
-import { COMPANY_VALUES, MISSION_ITEMS, VISION_ITEMS } from "@/data/constant";
+import { CLIENTS, COMPANY_VALUES, MISSION_ITEMS, VISION_ITEMS } from "@/data/constant";
 
 export const metadata: Metadata = {
   title: "About Direct Logic Systems | Empowering Businesses Since 1978",
@@ -63,7 +64,7 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-[#E5CAFF]/30 to-transparent pt-16 sm:pt-20">
-        <div className="container relative z-10 max-w-5xl px-4 py-8 sm:py-12">
+        <div className="container relative z-10 max-w-4xl px-4 py-8 sm:py-12">
           <Badge>
             <BadgeDot />
             About DirectLS
@@ -79,8 +80,8 @@ export default function AboutPage() {
       </section>
 
       {/* Journey Section */}
-      <section className="container max-w-5xl px-4 py-12 sm:py-16">
-        <div className="rounded-[calc(var(--radius-3xl)+var(--spacing)_*_2)] bg-gradient-to-b from-primary to-75% to-transparent p-2">
+      <section className="container max-w-4xl px-4 py-6">
+        <div className="rounded-[calc(var(--radius-3xl)+var(--spacing)_*_2)] bg-gradient-to-b from-primary to-85% to-transparent p-2">
           <div className="rounded-3xl bg-card p-6 sm:p-8 md:p-12">
             <Badge className="mx-auto" variant="secondary">
               <BadgeDot />
@@ -111,6 +112,22 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
+      <section className="container max-w-7xl px-4 pt-12 sm:pt-16 lg:pt-20">
+        <SectionHeader
+          badge="Clients"
+          description="Ethics you can count on—anytime, at Direct Logic Systems."
+          title="Our satisfied customers"
+        />
+        <div className="grid grid-cols-1 gap-8 py-8 text-center sm:gap-12 sm:py-12 md:grid-cols-2 lg:grid-cols-4">
+          {CLIENTS.map((value) => (
+            <div className="relative aspect-video rounded-lg bg-card" key={value.logo}>
+              <Image alt="Client" className="object-contain p-6" fill src={value.logo} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Values Section */}
       <section className="container max-w-7xl px-4 py-12 sm:py-16 lg:py-20">
         <SectionHeader
           badge="Values"
@@ -137,8 +154,8 @@ export default function AboutPage() {
         />
         <div className="relative mt-8 sm:mt-12">
           <Card>
-            <CardHeader className="px-4 pt-4 sm:px-6 sm:pt-6">
-              <CardTitle className="text-base sm:text-lg">
+            <CardHeader className="px-2">
+              <CardTitle className="text-base">
                 Our Mission{" "}
                 <span className="font-normal text-muted-foreground"> — Empowering Businesses Through Technology </span>
               </CardTitle>
@@ -166,8 +183,8 @@ export default function AboutPage() {
           <div className="ml-6 h-6 w-px border border-dashed sm:h-9 md:h-12" />
 
           <Card>
-            <CardHeader className="px-4 pt-4 sm:px-6 sm:pt-6">
-              <CardTitle className="text-base sm:text-lg">
+            <CardHeader className="px-2">
+              <CardTitle className="text-base">
                 Our Vision{" "}
                 <span className="font-normal text-muted-foreground"> — Shaping the Future of Digital Solutions</span>
               </CardTitle>
