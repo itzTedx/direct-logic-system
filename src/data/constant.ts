@@ -1,4 +1,4 @@
-import { IconArrowUpRight } from "@/assets/icons/arrows";
+import { IconComputer, IconSettings, IconShare } from "@/assets/icons/system";
 
 export const NAV_LINKS = [
   {
@@ -21,24 +21,24 @@ export const NAV_LINKS = [
 export const SOLUTIONS = [
   {
     id: 1,
-    title: "IT Services & Support",
+    title: "IT Solutions",
     description:
       "From IT infrastructure to cloud and security, we deliver end-to-end solutions that work seamlessly together - keeping your business running smarter, faster, and safer.",
-    icon: IconArrowUpRight,
+    icon: IconComputer,
   },
   {
     id: 2,
     title: "Expertise",
     description:
       "With over 40 years in the market, we combine deep industry knowledge with cutting-edge innovation to solve complex challenges and drive measurable results.",
-    icon: IconArrowUpRight,
+    icon: IconSettings,
   },
   {
     id: 3,
     title: "Innovation",
     description:
       "We help you embrace the future with tailored digital marketing, web solutions, and trading platforms that keep you ahead in a rapidly changing market.",
-    icon: IconArrowUpRight,
+    icon: IconShare,
   },
 ];
 

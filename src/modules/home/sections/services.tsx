@@ -38,12 +38,7 @@ export const Services = () => {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button
-                aria-label="Learn more about IT Services & Support"
-                className="w-full sm:w-auto"
-                size="sm"
-                variant="ghost"
-              >
+              <Button aria-label="Learn more about IT Services & Support" size="sm" variant="ghost">
                 Explore
               </Button>
               <Button size="icon" variant="secondary">
