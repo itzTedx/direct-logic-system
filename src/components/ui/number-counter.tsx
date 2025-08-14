@@ -22,7 +22,7 @@ export function NumberCounter({
 }) {
   const [number, setNumber] = useState<NumberProps>(0);
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "0px 0px -100px 0px" });
+  const isInView = useInView(ref, { margin: "0px 0px -100px 0px", once: true });
 
   useEffect(() => {
     if (isInView) {

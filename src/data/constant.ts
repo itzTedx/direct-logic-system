@@ -98,3 +98,27 @@ export const SERVICES = [
     tags: ["Custom software", "Web Design", "SEO", "Marketing"],
   },
 ];
+
+export const FEEDBACKS = [
+  {
+    id: 1,
+    content:
+      "Direct LS is one of the best service providers our organization has had the pleasure of using.  As an organization, we needed an entire overhaul to our out dated computer. We are pleased and confident in extending our highest recommendation for Direct LS.",
+    author: "Stephen Shaw",
+    authorTitle: "Surrey",
+  },
+  {
+    id: 2,
+    content:
+      "We've been extremely impressed with Direct LS IT services. They have done everything from removing a bad virus from one of our laptops. When it comes to IT support, Direct LS really offers a pro-active and complete solution.",
+    author: "Christopher Bush",
+    authorTitle: "South ceaserview",
+  },
+  {
+    id: 3,
+    content:
+      "I have used Direct LS LLC for many years. They offer an excellent all-round dedicated service every time. Their advice is always excellent. The rates fantastic and work faultless. A wonderful company to deal with.",
+    author: "Mark Peter",
+    authorTitle: "West Sussex",
+  },
+];

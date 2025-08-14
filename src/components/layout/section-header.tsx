@@ -21,10 +21,7 @@ export const SectionHeader = ({ title, description, badge, variant }: Props) => 
           {title}
         </h2>
       </div>
-      <p
-        className="text-balance text-base text-muted-foreground leading-relaxed sm:text-lg lg:text-xl"
-        id="section-description"
-      >
+      <p className="text-balance text-base text-muted-foreground leading-relaxed sm:text-lg" id="section-description">
         {description}
       </p>
     </div>
