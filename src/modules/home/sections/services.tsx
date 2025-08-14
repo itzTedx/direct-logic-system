@@ -10,7 +10,7 @@ export const Services = () => {
   return (
     <section
       aria-labelledby="services-heading"
-      className="container max-w-7xl space-y-8 px-4 py-16 md:space-y-12 md:px-6 md:py-24 lg:px-8 lg:py-32"
+      className="container max-w-7xl space-y-8 px-4 pb-16 md:space-y-12 md:px-6 md:pb-24 lg:px-8 lg:pb-32"
     >
       <SectionHeader
         badge="What we offer"
