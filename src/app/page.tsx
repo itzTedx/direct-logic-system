@@ -18,10 +18,10 @@ import { FAQ_ITEMS, SERVICES } from "@/data/constant";
 
 export default function Home() {
   return (
-    <main>
-      <header className="min-h-svh bg-gradient-to-b from-[#E5CAFF]/30 to-transparent">
-        <BackgroundLeft className="top-0 left-0 z-1" />
-        <BackgroundRight className="top-0 right-0 z-1" />
+    <main id="main-content" role="main">
+      <header className="min-h-svh bg-gradient-to-b from-[#E5CAFF]/30 to-transparent" role="banner">
+        <BackgroundLeft aria-hidden="true" className="top-0 left-0 z-1" />
+        <BackgroundRight aria-hidden="true" className="top-0 right-0 z-1" />
         <div className="relative z-10 ml-auto grid max-w-[90rem] grid-cols-2 items-center gap-4 pt-32">
           <div className="container max-w-3xl">
             <Badge>
@@ -38,76 +38,88 @@ export default function Home() {
               reliability, and growth for your business.
             </p>
             <div className="flex items-center gap-4">
-              <Button>Talk to us</Button>
-              <Button variant="outline">View Portfolio</Button>
+              <Button aria-label="Contact us to discuss your technology needs">Talk to us</Button>
+              <Button aria-label="View our portfolio of successful projects" variant="outline">
+                View Portfolio
+              </Button>
             </div>
           </div>
-          <div className="aspect-7/5 rounded-s-3xl bg-white ring-8 ring-white/40" />
+          <div
+            aria-label="Direct Logic Systems showcase image"
+            className="aspect-7/5 rounded-s-3xl bg-white ring-8 ring-white/40"
+            role="img"
+          />
         </div>
-        <section className="container mt-14 max-w-7xl text-center">
-          <h2>Trusted by 200+ Businesses in the UAE</h2>
-          <ul className="mx-auto mt-6 flex max-w-fit flex-wrap items-center divide-x [&>li]:px-6">
-            <li>
-              <Client1 />
+        <section aria-labelledby="clients-heading" className="container mt-14 max-w-7xl text-center">
+          <h2 id="clients-heading">Trusted by 200+ Businesses in the UAE</h2>
+          <ul
+            aria-label="Our trusted clients"
+            className="mx-auto mt-6 flex max-w-fit flex-wrap items-center divide-x [&>li]:px-6"
+            role="list"
+          >
+            <li role="listitem">
+              <Client1 aria-label="Client logo 1" />
             </li>
-            <li>
-              <Client2 />
+            <li role="listitem">
+              <Client2 aria-label="Client logo 2" />
             </li>
-            <li>
-              <Client1 />
+            <li role="listitem">
+              <Client1 aria-label="Client logo 3" />
             </li>
-            <li>
-              <Client2 />
+            <li role="listitem">
+              <Client2 aria-label="Client logo 4" />
             </li>
-            <li>
-              <Client1 />
+            <li role="listitem">
+              <Client1 aria-label="Client logo 5" />
             </li>
-            <li>
-              <Client2 />
+            <li role="listitem">
+              <Client2 aria-label="Client logo 6" />
             </li>
           </ul>
         </section>
       </header>
-      <section className="py-32">
+
+      <section aria-labelledby="about-heading" className="py-32">
         <div className="container max-w-7xl">
           <SectionHeader
             badge="About Direct LS"
             description=" Direct Logic Systems LLC, based in Dubai, has empowered businesses for over 40 years with expert IT services,
-        trading, and digital marketing - integrating the latest technology to help you stay ahead."
+          trading, and digital marketing - integrating the latest technology to help you stay ahead."
             title="Your Trusted Technology Partner Since 1978"
           />
-          <div className="mt-24 grid grid-cols-4 gap-6">
-            <div className="text-center">
+          <div aria-label="Company statistics" className="mt-24 grid grid-cols-4 gap-6" role="list">
+            <div className="text-center" role="listitem">
               <h3 className="font-bold text-4xl text-primary">
                 <NumberCounter suffix="+" value={45} />
               </h3>
               <p className="text-muted-foreground text-sm">Years of Experience</p>
             </div>
-            <div className="text-center">
+            <div className="text-center" role="listitem">
               <h3 className="font-bold text-4xl text-primary">On-Site</h3>
               <p className="mt-3 text-muted-foreground text-sm">Support in 2 Hours</p>
             </div>
-            <div className="text-center">
+            <div className="text-center" role="listitem">
               <h3 className="font-bold text-4xl text-primary">
                 <NumberCounter suffix="+" value={200} />
               </h3>
               <p className="text-muted-foreground text-sm">Satisfied Clients</p>
             </div>
-            <div className="text-center">
+            <div className="text-center" role="listitem">
               <h3 className="font-bold text-4xl text-primary">Global</h3>
               <p className="mt-3 text-muted-foreground text-sm">Trading Partnerships</p>
             </div>
           </div>
         </div>
       </section>
-      <section className="container max-w-7xl space-y-12 py-32">
+
+      <section aria-labelledby="services-heading" className="container max-w-7xl space-y-12 py-32">
         <SectionHeader
           badge="What we offer"
           description="Expanding Possibilities. Being the leading IT service provider in Dubai, UAE portfolio of our services are meant to offer you a comprehensive IT support services in Dubai, UAE."
           title="Our Services"
         />
-        <div className="grid grid-cols-3 gap-6">
-          <Card>
+        <div aria-label="Our services" className="grid grid-cols-3 gap-6" role="list">
+          <Card role="listitem">
             <CardContent>
               <CardHeader>
                 <CardTitle>IT Services & Support</CardTitle>
@@ -118,89 +130,110 @@ export default function Home() {
               </CardHeader>
             </CardContent>
             <CardFooter>
-              <Button>Explore</Button>
-              <IconArrowUpRight />
+              <Button aria-label="Learn more about IT Services & Support">Explore</Button>
+              <IconArrowUpRight aria-hidden="true" />
             </CardFooter>
           </Card>
         </div>
-        <Button>Explore More</Button>
+        <Button aria-label="View all our services">Explore More</Button>
       </section>
-      <section className="container max-w-7xl py-32">
-        <h2 className="text-center text-4xl">
+
+      <section aria-labelledby="solutions-heading" className="container max-w-7xl py-32">
+        <h2 className="text-center text-4xl" id="solutions-heading">
           Everything you'd <span className="text-primary">need</span>
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-lg text-muted-foreground">
           Direct Logic Systems LLC, based in Dubai, empowers businesses with innovative IT, trading, and digital
           marketing services. Our mission is to seamlessly integrate technology that drives your growth and security.
         </p>
-        <div className="mt-12 grid grid-cols-3 gap-6">
+        <div aria-label="Technology solutions" className="mt-12 grid grid-cols-3 gap-6" role="list">
           {SERVICES.map((service) => (
-            <div key={service.id}>
+            <div key={service.id} role="listitem">
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </div>
           ))}
         </div>
       </section>
-      <section className="py-32">
+
+      <section aria-labelledby="portfolio-heading" className="py-32">
         <div className="container max-w-7xl">
           <SectionHeader
             badge="Portfolio"
-            description="From complex IT infrastructure to cutting-edge digital campaigns, see how we’ve helped clients achieve lasting success."
+            description="From complex IT infrastructure to cutting-edge digital campaigns, see how we've helped clients achieve lasting success."
             title="Our Work Speaks for Itself"
           />
         </div>
-        <div className="mt-12 grid grid-cols-3 gap-6">
+        <div aria-label="Portfolio projects" className="mt-12 grid grid-cols-3 gap-6" role="list">
           {SERVICES.map((service) => (
-            <div className="aspect-4/3 rounded-2xl bg-red-400" key={service.id} />
+            <div
+              aria-label={`Portfolio project: ${service.title}`}
+              className="aspect-4/3 rounded-2xl bg-red-400"
+              key={service.id}
+              role="listitem"
+            />
           ))}
         </div>
       </section>
-      <section className="container max-w-7xl py-32">
+
+      <section aria-labelledby="testimonials-heading" className="container max-w-7xl py-32">
         <SectionHeader
           badge="Clients & Testimonials"
-          description="We’re proud to partner with diverse clients across industries, delivering tailored solutions and exceptional service."
+          description="We're proud to partner with diverse clients across industries, delivering tailored solutions and exceptional service."
           title="Trusted by 200+ Leading Businesses"
         />
-        <div className="mt-12 grid grid-cols-3 gap-6">
-          <Card>
+        <div aria-label="Client testimonials" className="mt-12 grid grid-cols-3 gap-6" role="list">
+          <Card role="listitem">
             <CardContent>
               <CardHeader className="flex items-center gap-2">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <IconStar className="size-5 shrink-0 text-yellow-500" key={index} />
-                ))}
+                <div aria-label="5 out of 5 stars rating" role="img">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <IconStar aria-hidden="true" className="size-5 shrink-0 text-yellow-500" key={index} />
+                  ))}
+                </div>
               </CardHeader>
-              <p>
-                Direct LS is one of the best service providers our organization has had the pleasure of using. As an
-                organization, we needed an entire overhaul to our out dated computer. We are pleased and confident in
-                extending our highest recommendation for Direct LS.
-              </p>
+              <blockquote>
+                <p>
+                  Direct LS is one of the best service providers our organization has had the pleasure of using. As an
+                  organization, we needed an entire overhaul to our out dated computer. We are pleased and confident in
+                  extending our highest recommendation for Direct LS.
+                </p>
+              </blockquote>
             </CardContent>
             <CardFooter>
               <div>
-                <h3>Stephen Shaw</h3>
-                <p>Surrey</p>
+                <cite className="not-italic">
+                  <h3>Stephen Shaw</h3>
+                  <p>Surrey</p>
+                </cite>
               </div>
             </CardFooter>
           </Card>
         </div>
-        <div className="mt-6 space-x-3">
-          <Button size="icon" variant="outline">
-            <IconArrowLeft />
+        <div aria-label="Testimonial navigation" className="mt-6 space-x-3" role="group">
+          <Button aria-label="Previous testimonial" size="icon" variant="outline">
+            <IconArrowLeft aria-hidden="true" />
           </Button>
-          <Button size="icon" variant="outline">
-            <IconArrowRight />
+          <Button aria-label="Next testimonial" size="icon" variant="outline">
+            <IconArrowRight aria-hidden="true" />
           </Button>
         </div>
       </section>
-      <section className="mx-6 rounded-t-4xl bg-white py-20">
+
+      <section aria-labelledby="faq-heading" className="mx-6 rounded-t-4xl bg-white py-20">
         <div className="container max-w-7xl">
           <SectionHeader
             badge="Frequently Asked Question"
-            description="We know choosing the right technology partner is a big decision. Here’s everything you need to know about working with Direct Logic Systems."
+            description="We know choosing the right technology partner is a big decision. Here's everything you need to know about working with Direct Logic Systems."
             title="Your Questions, Answered"
           />
-          <Accordion className="mt-6 w-full space-y-2" collapsible defaultValue="3" type="single">
+          <Accordion
+            aria-labelledby="faq-heading"
+            className="mt-6 w-full space-y-2"
+            collapsible
+            defaultValue="3"
+            type="single"
+          >
             {FAQ_ITEMS.map((item) => (
               <AccordionItem
                 className="rounded-md border bg-background px-4 py-1 outline-none last:border-b has-focus-visible:border-ring has-focus-visible:ring-[3px] has-focus-visible:ring-ring/50"
@@ -222,13 +255,17 @@ export default function Home() {
           </Accordion>
         </div>
       </section>
-      <section className="relative mx-6 rounded-b-4xl bg-gradient-to-b from-50% from-white to-50% to-transparent py-20">
-        <div className="container relative inset-shadow-[0_1px_42px_0] inset-shadow-white/25 max-w-7xl space-y-6 overflow-hidden rounded-4xl bg-radial-[at_50%_0%] from-sky-400 to-primary py-20 text-center text-background">
+
+      <section
+        aria-labelledby="cta-heading"
+        className="relative mx-6 rounded-b-4xl bg-gradient-to-b from-50% from-white to-50% to-transparent py-20"
+      >
+        <div className="container relative inset-shadow-[0_1px_42px_0] inset-shadow-white/25 z-10 max-w-7xl space-y-6 overflow-hidden rounded-4xl bg-radial-[at_50%_0%] from-sky-400 to-primary py-20 text-center text-background">
           <Badge className="relative z-10">
             <BadgeDot />
             What we offer
           </Badge>
-          <h2 className="relative z-10 text-balance font-bold text-5xl leading-snug">
+          <h2 className="relative z-10 text-balance font-bold text-5xl leading-snug" id="cta-heading">
             Power Your Business with <br />
             40+ Years of Proven Tech Expertise
           </h2>
@@ -236,10 +273,11 @@ export default function Home() {
             Your business deserves more than just technology - it deserves the right strategy, execution, and innovation
             to thrive in a competitive market.
           </p>
-          <Button>Get know more</Button>
-          <IconDirectWatermark className="-top-1/2 -left-12 absolute text-white/8" />
-          <IconDirectWatermark className="-bottom-1/2 -right-20 -scale-x-90 absolute text-white/8" />
+          <Button aria-label="Learn more about our services and expertise">Get know more</Button>
+          <IconDirectWatermark aria-hidden="true" className="-top-1/2 -left-12 absolute text-white/8" />
+          <IconDirectWatermark aria-hidden="true" className="-bottom-1/2 -right-20 -scale-x-90 absolute text-white/8" />
         </div>
+        <div aria-hidden="true" className="absolute top-1/2 h-8 w-full rounded-b-full bg-white" />
       </section>
     </main>
   );
