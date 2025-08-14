@@ -11,7 +11,7 @@ interface Props {
 
 export const SectionHeader = ({ title, description, badge, variant }: Props) => {
   return (
-    <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 md:items-center md:gap-6 lg:gap-12">
+    <header className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 md:items-center md:gap-6 lg:gap-12">
       <div className="space-y-2">
         <Badge variant={variant}>
           <BadgeDot />
@@ -24,6 +24,6 @@ export const SectionHeader = ({ title, description, badge, variant }: Props) => 
       <p className="text-balance text-base text-muted-foreground leading-relaxed sm:text-lg" id="section-description">
         {description}
       </p>
-    </div>
+    </header>
   );
 };

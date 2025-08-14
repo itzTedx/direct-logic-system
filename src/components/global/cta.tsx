@@ -10,7 +10,7 @@ export const Cta = () => {
       aria-labelledby="cta-heading"
       className="relative mx-4 rounded-b-4xl bg-gradient-to-b from-50% from-white to-50% to-transparent py-12 md:mx-6 md:py-16 lg:py-20"
     >
-      <div className="container relative inset-shadow-[0_1px_42px_0] inset-shadow-white/25 z-10 max-w-7xl space-y-4 overflow-hidden rounded-4xl bg-radial-[105%_100%_at_50%_0%] from-[#6DA3FF] via-55% via-secondary to-primary px-4 py-12 text-center text-background md:space-y-6 md:px-6 md:py-16 lg:px-8 lg:py-20">
+      <div className="container relative z-10 max-w-7xl space-y-4 overflow-hidden rounded-4xl bg-radial-[105%_100%_at_50%_0%] from-[#6DA3FF] via-55% via-secondary to-primary px-4 py-12 text-center text-background shadow-[0_12px_42px_0_oklch(0.2788_0.0909_306.27/40%),_inset_0_1px_42px_12px_oklch(1_0_0_/25%)] md:space-y-6 md:px-6 md:py-16 lg:px-8 lg:py-20">
         <Badge className="relative z-10" variant="outline">
           <BadgeDot />
           What we offer
