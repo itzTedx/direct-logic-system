@@ -1,4 +1,6 @@
 import { IconComputer, IconSettings, IconShare } from "@/assets/icons/system";
+import { IconHands, IconHeart, IconInnovation } from "@/assets/icons/values";
+import { IconBulb, IconChartUp, IconHandshake, IconStarSparkle, IconUser, IconWorld } from "@/assets/icons/visions";
 
 export const NAV_LINKS = [
   {
@@ -120,5 +122,67 @@ export const FEEDBACKS = [
       "I have used Direct LS LLC for many years. They offer an excellent all-round dedicated service every time. Their advice is always excellent. The rates fantastic and work faultless. A wonderful company to deal with.",
     author: "Mark Peter",
     authorTitle: "West Sussex",
+  },
+];
+
+// Company Values - reusable across multiple pages
+export const COMPANY_VALUES = [
+  {
+    id: 1,
+    icon: IconHands,
+    title: "Integrity First",
+    description:
+      "We believe trust is earned through honesty and transparency. Every decision, project, and solution is built on a foundation of ethical responsibility.",
+  },
+  {
+    id: 2,
+    icon: IconHeart,
+    title: "Excellence in Detail",
+    description:
+      "From planning to delivery, we go beyond meeting standards—we set them. Quality is not just our goal; it's our promise.",
+  },
+  {
+    id: 3,
+    icon: IconInnovation,
+    title: "Innovation with Impact",
+    description:
+      "We embrace forward-thinking solutions that solve real problems, creating lasting value for our clients and their businesses.",
+  },
+];
+
+// Mission & Vision items - reusable
+export const MISSION_ITEMS = [
+  {
+    icon: IconUser,
+    title: "Client Satisfaction First",
+    description: "We work for 100% client satisfaction.",
+  },
+  {
+    icon: IconBulb,
+    title: "High-Quality IT Solutions",
+    description: "Deliver sustainable, cutting-edge IT services across UAE.",
+  },
+  {
+    icon: IconHandshake,
+    title: "Integrity & Leadership",
+    description: "Build a reputation for reliability and ethical service.",
+  },
+];
+
+export const VISION_ITEMS = [
+  {
+    icon: IconStarSparkle,
+    title: "Innovation at Its Best",
+    description: "Inspire teams to provide extraordinary, innovative solutions.",
+  },
+  {
+    icon: IconWorld,
+    title: "Trusted Partnerships",
+    description: "Nurture strong, reliable relationships with our clients.",
+  },
+  {
+    icon: IconChartUp,
+    title: "Leadership in IT",
+    description: "Grow as a leading IT company, driving progress and efficiency.",
   },
 ];

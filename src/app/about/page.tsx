@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import { Cta } from "@/components/global/cta";
 import { Faq } from "@/components/global/faq";
 import { SectionHeader } from "@/components/layout/section-header";
@@ -5,168 +7,193 @@ import { Badge, BadgeDot } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { BackgroundLeft, BackgroundRight } from "@/assets/background";
-import { IconHands, IconHeart, IconInnovation } from "@/assets/icons/values";
-import { IconBulb, IconChartUp, IconHandshake, IconStarSparkle, IconUser, IconWorld } from "@/assets/icons/visions";
+
+import { COMPANY_VALUES, MISSION_ITEMS, VISION_ITEMS } from "@/data/constant";
+
+export const metadata: Metadata = {
+  title: "About Direct Logic Systems | Empowering Businesses Since 1978",
+  description:
+    "Direct Logic Systems LLC (DLS) has been a trusted IT partner for over 45 years. We provide end-to-end IT services, trading solutions, and digital innovations in Dubai, UAE.",
+  keywords: [
+    "Direct Logic Systems",
+    "IT services Dubai",
+    "trading solutions UAE",
+    "digital services",
+    "IT infrastructure",
+    "network security",
+    "software development",
+    "digital marketing",
+    "business technology solutions",
+  ],
+  openGraph: {
+    title: "About Direct Logic Systems | Empowering Businesses Since 1978",
+    description:
+      "Direct Logic Systems LLC (DLS) has been a trusted IT partner for over 45 years. We provide end-to-end IT services, trading solutions, and digital innovations in Dubai, UAE.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Direct Logic Systems",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Direct Logic Systems | Empowering Businesses Since 1978",
+    description:
+      "Direct Logic Systems LLC (DLS) has been a trusted IT partner for over 45 years. We provide end-to-end IT services, trading solutions, and digital innovations in Dubai, UAE.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className="min-h-screen">
       <BackgroundLeft aria-hidden="true" className="top-0 left-0 z-1" />
       <BackgroundRight aria-hidden="true" className="top-0 right-0 z-1" />
-      <div className="bg-gradient-to-b from-[#E5CAFF]/30 to-transparent pt-20">
-        <header className="container relative z-10 max-w-5xl py-12">
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-[#E5CAFF]/30 to-transparent pt-16 sm:pt-20">
+        <div className="container relative z-10 max-w-5xl px-4 py-8 sm:py-12">
           <Badge>
             <BadgeDot />
             About DirectLS
           </Badge>
-          <h1 className="mt-4 text-pretty font-bold text-6xl">Empowering Businesses Through Technology Since 1978</h1>
-          <p className="mt-4 max-w-3xl text-pretty text-lg">
+          <h1 className="mt-4 text-pretty font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            Empowering Businesses Through Technology Since 1978
+          </h1>
+          <p className="mt-4 max-w-3xl text-pretty text-base text-muted-foreground sm:text-lg">
             Delivering end-to-end IT services, trading solutions, and digital innovations that empower businesses to
             operate smarter, faster, and more securely.
           </p>
-        </header>
-      </div>
-      <section className="container max-w-5xl">
+        </div>
+      </section>
+
+      {/* Journey Section */}
+      <section className="container max-w-5xl px-4 py-12 sm:py-16">
         <div className="rounded-[calc(var(--radius-3xl)+var(--spacing)_*_2)] bg-gradient-to-b from-primary to-75% to-transparent p-2">
-          <div className="rounded-3xl bg-card p-12">
+          <div className="rounded-3xl bg-card p-6 sm:p-8 md:p-12">
             <Badge className="mx-auto" variant="secondary">
               <BadgeDot />
               Our Journey
             </Badge>
-            <h2 className="mt-4 font-medium text-2xl">
+            <h2 className="mt-4 text-center font-medium text-xl sm:text-2xl">
               Empowering Growth, Building Trust – shaping solutions that help businesses thrive.
             </h2>
-            <p className="mt-3 whitespace-break-spaces text-lg text-muted-foreground">
-              Direct Logic Systems LLC (DLS), headquartered in Dubai, UAE, has been a trusted partner for businesses for
-              over 45 years. We provide end-to-end IT services, trading solutions, and digital services, helping
-              organizations operate smarter, scale faster, and stay secure.
-              <br />
-              <br />
-              Our mission is simple: to make technology work for you. From robust IT infrastructure and network security
-              to cutting-edge software and digital marketing, we deliver solutions that integrate seamlessly with your
-              business environment.
-              <br />
-              <br />
-              Founded in 1978, Direct LS started as a dedicated IT service provider in Dubai. Over the decades, we
-              expanded our capabilities to include trading solutions and digital services, evolving into a full-service
-              technology partner for companies across the UAE and beyond.
-            </p>
+            <div className="mt-6 space-y-4 text-base text-muted-foreground sm:mt-8 sm:text-lg">
+              <p>
+                Direct Logic Systems LLC (DLS), headquartered in Dubai, UAE, has been a trusted partner for businesses
+                for over 45 years. We provide end-to-end IT services, trading solutions, and digital services, helping
+                organizations operate smarter, scale faster, and stay secure.
+              </p>
+              <p>
+                Our mission is simple: to make technology work for you. From robust IT infrastructure and network
+                security to cutting-edge software and digital marketing, we deliver solutions that integrate seamlessly
+                with your business environment.
+              </p>
+              <p>
+                Founded in 1978, Direct LS started as a dedicated IT service provider in Dubai. Over the decades, we
+                expanded our capabilities to include trading solutions and digital services, evolving into a
+                full-service technology partner for companies across the UAE and beyond.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      <section className="container max-w-7xl py-20">
+
+      {/* Values Section */}
+      <section className="container max-w-7xl px-4 py-12 sm:py-16 lg:py-20">
         <SectionHeader
           badge="Values"
           description="Ethics you can count on—anytime, at Direct Logic Systems."
           title="Ethics first, and second"
         />
-        <div className="grid grid-cols-3 gap-12 py-12 text-center">
-          <div className="flex flex-col items-center gap-2">
-            <IconHands className="h-20 w-20" />
-            <h3 className="font-medium text-2xl">Integrity First</h3>
-            <p className="text-muted-foreground">
-              We believe trust is earned through honesty and transparency. Every decision, project, and solution is
-              built on a foundation of ethical responsibility.
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <IconHeart className="h-20 w-20" />
-            <h3 className="font-medium text-2xl">Detail Every Excellence in</h3>
-            <p className="text-muted-foreground">
-              From planning to delivery, we go beyond meeting standards—we set them. Quality is not just our goal; it’s
-              our promise.
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <IconInnovation className="h-20 w-20" />
-            <h3 className="font-medium text-2xl">Innovation with Impact</h3>
-            <p className="text-muted-foreground">
-              We embrace forward-thinking solutions that solve real problems, creating lasting value for our clients and
-              their businesses.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 gap-8 py-8 text-center sm:gap-12 sm:py-12 md:grid-cols-2 lg:grid-cols-3">
+          {COMPANY_VALUES.map((value) => (
+            <article className="flex flex-col items-center gap-4 sm:gap-6" key={value.id}>
+              <value.icon className="h-16 w-16 sm:h-20 sm:w-20" />
+              <h3 className="font-medium text-xl sm:text-2xl">{value.title}</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">{value.description}</p>
+            </article>
+          ))}
         </div>
       </section>
-      <section className="container max-w-7xl py-20">
+
+      {/* Mission & Vision Section */}
+      <section className="container max-w-7xl px-4 py-12 sm:py-16 lg:py-20">
         <SectionHeader
           badge="Guiding Principles"
           description="We aim to deliver innovative, reliable tech solutions that help businesses thrive. Guided by integrity and a passion for excellence, we work toward a future where technology empowers growth and lasting success."
           title="Mission & Vision That Drive Us Forward"
         />
-        <div className="relative mt-12">
+        <div className="relative mt-8 sm:mt-12">
           <Card>
-            <CardHeader className="px-2 pt-1.5">
-              <CardTitle className="text-base">
+            <CardHeader className="px-4 pt-4 sm:px-6 sm:pt-6">
+              <CardTitle className="text-base sm:text-lg">
                 Our Mission{" "}
                 <span className="font-normal text-muted-foreground"> — Empowering Businesses Through Technology </span>
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="mb-4 text-pretty text-muted-foreground">
+            <CardContent className="px-4 pb-4 sm:px-6 sm:pb-6">
+              <p className="mb-4 text-pretty text-muted-foreground text-sm sm:mb-6 sm:text-base">
                 To empower businesses with smart, dependable technology that simplifies complexity, boosts efficiency,
                 and unlocks new opportunities for success.
               </p>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3">
-                  <IconUser className="size-5 text-primary" />
-                  <h3>Client Satisfaction First</h3>
-                  <span className="size-1 rounded-full bg-muted-foreground/50" />
-                  <p className="text-muted-foreground">We work for 100% client satisfaction.</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <IconBulb className="size-5 text-primary" />
-                  <h3>High-Quality IT Solutions</h3>
-                  <span className="size-1 rounded-full bg-muted-foreground/50" />
-                  <p className="text-muted-foreground">Deliver sustainable, cutting-edge IT services across UAE.</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <IconHandshake className="size-5 text-primary" />
-                  <h3>Integrity & Leadership</h3>
-                  <span className="size-1 rounded-full bg-muted-foreground/50" />
-                  <p className="text-muted-foreground">Build a reputation for reliability and ethical service.</p>
-                </li>
+              <ul className="space-y-3 sm:space-y-4">
+                {MISSION_ITEMS.map((item, index) => (
+                  <li className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3" key={index}>
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <item.icon className="size-5 flex-shrink-0 text-primary" />
+                      <h3 className="font-medium text-sm sm:text-base">{item.title}</h3>
+                    </div>
+                    <span className="hidden size-1 rounded-full bg-muted-foreground/50 sm:block" />
+                    <p className="text-muted-foreground text-sm sm:text-base">{item.description}</p>
+                  </li>
+                ))}
               </ul>
             </CardContent>
           </Card>
-          <div className="ml-6 h-12 w-px border border-dashed" />
+
+          <div className="ml-6 h-6 w-px border border-dashed sm:h-9 md:h-12" />
+
           <Card>
-            <CardHeader className="px-2 pt-1.5">
-              <CardTitle className="text-base">
+            <CardHeader className="px-4 pt-4 sm:px-6 sm:pt-6">
+              <CardTitle className="text-base sm:text-lg">
                 Our Vision{" "}
                 <span className="font-normal text-muted-foreground"> — Shaping the Future of Digital Solutions</span>
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="mb-4 text-pretty text-muted-foreground">
+            <CardContent className="px-4 pb-4 sm:px-6 sm:pb-6">
+              <p className="mb-4 text-pretty text-muted-foreground text-sm sm:mb-6 sm:text-base">
                 To be the go-to partner for innovative business solutions, recognized for delivering measurable results,
                 building trust, and fostering long-term relationships with our clients.
               </p>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3">
-                  <IconStarSparkle className="size-5 text-primary" />
-                  <h3>Innovation at Its Best</h3>
-                  <span className="size-1 rounded-full bg-muted-foreground/50" />
-                  <p className="text-muted-foreground">Inspire teams to provide extraordinary, innovative solutions.</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <IconWorld className="size-5 text-primary" />
-                  <h3>Trusted Partnerships</h3>
-                  <span className="size-1 rounded-full bg-muted-foreground/50" />
-                  <p className="text-muted-foreground">Nurture strong, reliable relationships with our clients.</p>
-                </li>
-                <li className="flex items-center gap-3">
-                  <IconChartUp className="size-5 text-primary" />
-                  <h3>Leadership in IT</h3>
-                  <span className="size-1 rounded-full bg-muted-foreground/50" />
-                  <p className="text-muted-foreground">
-                    Grow as a leading IT company, driving progress and efficiency.
-                  </p>
-                </li>
+              <ul className="space-y-3 sm:space-y-4">
+                {VISION_ITEMS.map((item, index) => (
+                  <li className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3" key={index}>
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <item.icon className="size-5 flex-shrink-0 text-primary" />
+                      <h3 className="font-medium text-sm sm:text-base">{item.title}</h3>
+                    </div>
+                    <span className="hidden size-1 rounded-full bg-muted-foreground/50 sm:block" />
+                    <p className="text-muted-foreground text-sm sm:text-base">{item.description}</p>
+                  </li>
+                ))}
               </ul>
             </CardContent>
           </Card>
         </div>
       </section>
+
       <Faq />
       <Cta />
     </main>
