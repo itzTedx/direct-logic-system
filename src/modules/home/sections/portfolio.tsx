@@ -1,6 +1,6 @@
 import { SectionHeader } from "@/components/layout/section-header";
 
-import { SERVICES } from "@/data/constant";
+import { SOLUTIONS } from "@/data/constant";
 
 export const Portfolio = () => {
   return (
@@ -17,7 +17,7 @@ export const Portfolio = () => {
         className="mt-8 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-2 md:gap-6 lg:grid-cols-3"
         role="list"
       >
-        {SERVICES.map((service) => (
+        {SOLUTIONS.map((service) => (
           <div
             aria-label={`Portfolio project: ${service.title}`}
             className="aspect-4/3 rounded-2xl bg-red-400"

@@ -18,7 +18,7 @@ export const NAV_LINKS = [
   },
 ];
 
-export const SERVICES = [
+export const SOLUTIONS = [
   {
     id: 1,
     title: "IT Services & Support",
@@ -72,5 +72,29 @@ export const FAQ_ITEMS = [
     title: "How do I get started?",
     content:
       "All components follow WAI-ARIA standards, featuring proper ARIA attributes, keyboard navigation, and screen reader support. Regular testing ensures compatibility with NVDA, VoiceOver, and JAWS.",
+  },
+];
+
+export const SERVICES = [
+  {
+    id: 1,
+    title: "IT Services & Support",
+    description:
+      "From strategic IT consulting to reliable infrastructure and fast 2-hour on-site support, we keep your systems secure and efficient.",
+    tags: ["Consultancy", "Infrastructure", "Maintenance", "Security"],
+  },
+  {
+    id: 2,
+    title: "Trading Solutions",
+    description:
+      "We source electronics, IT equipment, and industrial products from trusted global suppliers, ensuring quality, competitive prices, and timely delivery.",
+    tags: ["Electronics", "IT Equipment", "Industrial products"],
+  },
+  {
+    id: 3,
+    title: "Software & Digital Marketing",
+    description:
+      "We create custom software, modern websites, and data-driven marketing campaigns—boosting your brand’s visibility, engagement, and results.",
+    tags: ["Custom software", "Web Design", "SEO", "Marketing"],
   },
 ];

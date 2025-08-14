@@ -1,4 +1,4 @@
-import { SERVICES } from "@/data/constant";
+import { SOLUTIONS } from "@/data/constant";
 
 export const Solutions = () => {
   return (
@@ -18,10 +18,10 @@ export const Solutions = () => {
         className="mt-8 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-2 md:gap-6 lg:grid-cols-3"
         role="list"
       >
-        {SERVICES.map((service) => (
-          <div className="p-4 md:p-6" key={service.id} role="listitem">
-            <h3 className="mb-2 font-semibold text-lg md:text-xl">{service.title}</h3>
-            <p className="text-muted-foreground text-sm md:text-base">{service.description}</p>
+        {SOLUTIONS.map((solution) => (
+          <div className="p-4 md:p-6" key={solution.id} role="listitem">
+            <h3 className="mb-2 font-semibold text-lg md:text-xl">{solution.title}</h3>
+            <p className="text-muted-foreground text-sm md:text-base">{solution.description}</p>
           </div>
         ))}
       </div>
