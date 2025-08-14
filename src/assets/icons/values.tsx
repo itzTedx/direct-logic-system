@@ -610,7 +610,7 @@ export const IconInnovation = (props: SVGProps) => {
           <feBlend in="SourceGraphic" in2="effect1_dropShadow_159_127" mode="normal" result="shape" />
         </filter>
         <filter
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
           height="8.22061"
           id="filter1_d_159_127"
@@ -632,7 +632,7 @@ export const IconInnovation = (props: SVGProps) => {
           <feBlend in="SourceGraphic" in2="effect1_dropShadow_159_127" mode="normal" result="shape" />
         </filter>
         <filter
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
           height="7.76151"
           id="filter2_d_159_127"
