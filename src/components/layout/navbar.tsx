@@ -2,9 +2,8 @@ import Link from "next/link";
 
 import { Logo, LogoWordmark } from "@/assets/logo";
 
-import { NAV_LINKS } from "@/data/constant";
-
 import { Button } from "../ui/button";
+import { NavLinks } from "./ui/nav-links";
 
 export const Navbar = () => {
   return (
@@ -15,15 +14,7 @@ export const Navbar = () => {
           <LogoWordmark />
         </Link>
 
-        <ul className="flex shrink-0 items-center gap-4">
-          {NAV_LINKS.map((link) => (
-            <li key={link.id}>
-              <Link className="shrink-0 font-medium text-foreground/80 text-sm hover:text-foreground" href={link.href}>
-                <span>{link.label}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <NavLinks />
 
         <Button size="lg" variant="primary">
           <Link className="" href="/contact">
