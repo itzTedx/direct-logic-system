@@ -21,7 +21,7 @@ export const Services = () => {
         role="list"
       >
         <Card role="listitem">
-          <CardContent>
+          <CardContent className="flex flex-col justify-between gap-6">
             <CardHeader>
               <CardTitle>IT Services & Support</CardTitle>
               <CardDescription>
@@ -29,12 +29,70 @@ export const Services = () => {
                 systems secure and efficient.
               </CardDescription>
             </CardHeader>
+            <ul className="flex flex-wrap gap-2">
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Consultancy</li>
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Infrastructure</li>
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Maintenance</li>
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Security</li>
+            </ul>
           </CardContent>
           <CardFooter>
-            <Button aria-label="Learn more about IT Services & Support" className="w-full sm:w-auto">
+            <Button aria-label="Learn more about IT Services & Support" className="w-full sm:w-auto" size="sm">
               Explore
             </Button>
-            <IconArrowUpRight aria-hidden="true" />
+            <Button size="icon" variant="secondary">
+              <IconArrowUpRight aria-hidden="true" />
+            </Button>
+          </CardFooter>
+        </Card>
+        <Card role="listitem">
+          <CardContent className="flex flex-col justify-between gap-6">
+            <CardHeader>
+              <CardTitle>IT Services & Support</CardTitle>
+              <CardDescription>
+                From strategic IT consulting to reliable infrastructure and fast 2-hour on-site support, we keep your
+                systems secure and efficient.
+              </CardDescription>
+            </CardHeader>
+            <ul className="flex flex-wrap gap-2">
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Consultancy</li>
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Infrastructure</li>
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Maintenance</li>
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Security</li>
+            </ul>
+          </CardContent>
+          <CardFooter>
+            <Button aria-label="Learn more about IT Services & Support" className="w-full sm:w-auto" size="sm">
+              Explore
+            </Button>
+            <Button size="icon" variant="secondary">
+              <IconArrowUpRight aria-hidden="true" />
+            </Button>
+          </CardFooter>
+        </Card>
+        <Card role="listitem">
+          <CardContent className="flex flex-col justify-between gap-6">
+            <CardHeader>
+              <CardTitle>IT Services & Support</CardTitle>
+              <CardDescription>
+                From strategic IT consulting to reliable infrastructure and fast 2-hour on-site support, we keep your
+                systems secure and efficient.
+              </CardDescription>
+            </CardHeader>
+            <ul className="flex flex-wrap gap-2">
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Consultancy</li>
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Infrastructure</li>
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Maintenance</li>
+              <li className="rounded-md bg-primary-foreground/40 px-2 py-0.5 text-primary text-sm">Security</li>
+            </ul>
+          </CardContent>
+          <CardFooter>
+            <Button aria-label="Learn more about IT Services & Support" className="w-full sm:w-auto" size="sm">
+              Explore
+            </Button>
+            <Button size="icon" variant="secondary">
+              <IconArrowUpRight aria-hidden="true" />
+            </Button>
           </CardFooter>
         </Card>
       </div>

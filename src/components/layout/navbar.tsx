@@ -25,7 +25,7 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <Button size="lg">
+        <Button size="lg" variant="primary">
           <Link className="" href="/contact">
             Contact
           </Link>

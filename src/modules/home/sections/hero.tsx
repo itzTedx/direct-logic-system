@@ -26,6 +26,7 @@ export const Hero = () => {
           </p>
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <Button aria-label="Contact us to discuss your technology needs" className="w-full sm:w-auto">
+              <div className="size-5 rounded-full bg-accent" />
               Talk to us
             </Button>
             <Button
@@ -47,7 +48,7 @@ export const Hero = () => {
         aria-labelledby="clients-heading"
         className="container mt-8 max-w-7xl px-4 text-center md:mt-12 md:px-6 lg:mt-14 lg:px-8"
       >
-        <h2 className="text-xl md:text-2xl lg:text-3xl" id="clients-heading">
+        <h2 className="text-xl" id="clients-heading">
           Trusted by 200+ Businesses in the UAE
         </h2>
         <ul
