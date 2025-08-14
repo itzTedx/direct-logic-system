@@ -5,127 +5,21 @@ import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/acco
 import { Badge, BadgeDot } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { NumberCounter } from "@/components/ui/number-counter";
 
-import { BackgroundLeft, BackgroundRight } from "@/assets/background";
-import { Client1, Client2 } from "@/assets/brands";
 import { IconArrowLeft, IconArrowRight, IconArrowUpRight } from "@/assets/icons/arrows";
 import { IconPlus } from "@/assets/icons/plus";
 import { IconStar } from "@/assets/icons/star";
 import { IconDirectWatermark } from "@/assets/logo";
 
 import { FAQ_ITEMS, SERVICES } from "@/data/constant";
+import { About, Hero } from "@/modules/home/sections";
 
 export default function Home() {
   return (
     <main id="main-content" role="main">
-      <header className="min-h-svh bg-gradient-to-b from-[#E5CAFF]/30 to-transparent" role="banner">
-        <BackgroundLeft aria-hidden="true" className="top-0 left-0 z-1" />
-        <BackgroundRight aria-hidden="true" className="top-0 right-0 z-1" />
-        <div className="relative z-10 ml-auto grid max-w-[90rem] grid-cols-1 items-center gap-4 pt-16 pl-4 md:pt-24 md:pl-6 lg:grid-cols-2 lg:pt-32 lg:pl-8">
-          <div className="container max-w-3xl">
-            <Badge>
-              <BadgeDot />
-              Your Complete Technology & Trading Partner
-            </Badge>
-            <h1 className="mt-3 font-bold text-3xl leading-[1.15] md:text-4xl lg:text-5xl">
-              Making Technology
-              <br /> Work for You <br />
-              <span className="text-primary">Faster, Smarter, Better.</span>
-            </h1>
-            <p className="mt-3 mb-6 text-balance text-base text-muted-foreground leading-relaxed md:text-lg">
-              From IT infrastructure to trading solutions, software, and digital marketing, we deliver innovation,
-              reliability, and growth for your business.
-            </p>
-            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-              <Button aria-label="Contact us to discuss your technology needs" className="w-full sm:w-auto">
-                Talk to us
-              </Button>
-              <Button
-                aria-label="View our portfolio of successful projects"
-                className="w-full sm:w-auto"
-                variant="outline"
-              >
-                View Portfolio
-              </Button>
-            </div>
-          </div>
-          <div
-            aria-label="Direct Logic Systems showcase image"
-            className="mt-8 aspect-7/5 rounded-s-3xl bg-white ring-8 ring-white/40 lg:mt-0"
-            role="img"
-          />
-        </div>
-        <section
-          aria-labelledby="clients-heading"
-          className="container mt-8 max-w-7xl px-4 text-center md:mt-12 md:px-6 lg:mt-14 lg:px-8"
-        >
-          <h2 className="text-xl md:text-2xl lg:text-3xl" id="clients-heading">
-            Trusted by 200+ Businesses in the UAE
-          </h2>
-          <ul
-            aria-label="Our trusted clients"
-            className="mx-auto mt-6 flex max-w-fit flex-wrap items-center justify-center gap-4 md:gap-6 lg:divide-x lg:[&>li]:px-6"
-            role="list"
-          >
-            <li role="listitem">
-              <Client1 aria-label="Client logo 1" className="h-8 md:h-10 lg:h-12" />
-            </li>
-            <li role="listitem">
-              <Client2 aria-label="Client logo 2" className="h-8 md:h-10 lg:h-12" />
-            </li>
-            <li role="listitem">
-              <Client1 aria-label="Client logo 3" className="h-8 md:h-10 lg:h-12" />
-            </li>
-            <li role="listitem">
-              <Client2 aria-label="Client logo 4" className="h-8 md:h-10 lg:h-12" />
-            </li>
-            <li role="listitem">
-              <Client1 aria-label="Client logo 5" className="h-8 md:h-10 lg:h-12" />
-            </li>
-            <li role="listitem">
-              <Client2 aria-label="Client logo 6" className="h-8 md:h-10 lg:h-12" />
-            </li>
-          </ul>
-        </section>
-      </header>
+      <Hero />
 
-      <section aria-labelledby="about-heading" className="px-4 py-16 md:px-6 md:py-24 lg:px-8 lg:py-32">
-        <div className="container max-w-7xl">
-          <SectionHeader
-            badge="About Direct LS"
-            description=" Direct Logic Systems LLC, based in Dubai, has empowered businesses for over 40 years with expert IT services,
-          trading, and digital marketing - integrating the latest technology to help you stay ahead."
-            title="Your Trusted Technology Partner Since 1978"
-          />
-          <div
-            aria-label="Company statistics"
-            className="mt-12 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-4 md:gap-6 lg:mt-24"
-            role="list"
-          >
-            <div className="text-center" role="listitem">
-              <h3 className="font-bold text-2xl text-primary md:text-3xl lg:text-4xl">
-                <NumberCounter suffix="+" value={45} />
-              </h3>
-              <p className="text-muted-foreground text-xs md:text-sm">Years of Experience</p>
-            </div>
-            <div className="text-center" role="listitem">
-              <h3 className="font-bold text-2xl text-primary md:text-3xl lg:text-4xl">On-Site</h3>
-              <p className="mt-1 text-muted-foreground text-xs md:mt-3 md:text-sm">Support in 2 Hours</p>
-            </div>
-            <div className="text-center" role="listitem">
-              <h3 className="font-bold text-2xl text-primary md:text-3xl lg:text-4xl">
-                <NumberCounter suffix="+" value={200} />
-              </h3>
-              <p className="text-muted-foreground text-xs md:text-sm">Satisfied Clients</p>
-            </div>
-            <div className="text-center" role="listitem">
-              <h3 className="font-bold text-2xl text-primary md:text-3xl lg:text-4xl">Global</h3>
-              <p className="mt-1 text-muted-foreground text-xs md:mt-3 md:text-sm">Trading Partnerships</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <About />
 
       <section
         aria-labelledby="services-heading"
@@ -229,12 +123,10 @@ export default function Home() {
         >
           <Card role="listitem">
             <CardContent>
-              <CardHeader className="flex items-center gap-2">
-                <div aria-label="5 out of 5 stars rating" role="img">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <IconStar aria-hidden="true" className="size-4 shrink-0 text-yellow-500 md:size-5" key={index} />
-                  ))}
-                </div>
+              <CardHeader aria-label="5 out of 5 stars rating" className="flex items-center gap-2" role="img">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <IconStar aria-hidden="true" className="size-4 shrink-0 text-yellow-500 md:size-5" key={index} />
+                ))}
               </CardHeader>
               <blockquote>
                 <p className="text-sm md:text-base">
