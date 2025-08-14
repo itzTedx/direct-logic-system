@@ -26,7 +26,9 @@ export const Navbar = () => {
         </ul>
 
         <Button size="lg">
-          <Link href="/contact">Contact</Link>
+          <Link className="" href="/contact">
+            Contact
+          </Link>
         </Button>
       </div>
     </nav>
