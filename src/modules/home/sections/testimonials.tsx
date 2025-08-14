@@ -2,7 +2,7 @@ import { SectionHeader } from "@/components/layout/section-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 
-import { IconArrowLeft, IconArrowRight } from "@/assets/icons/arrows";
+import { IconArrowLeft, IconArrowRight, IconArrowUpRight } from "@/assets/icons/arrows";
 import { IconStar } from "@/assets/icons/star";
 
 export const Testimonials = () => {
@@ -28,7 +28,7 @@ export const Testimonials = () => {
                 <IconStar aria-hidden="true" className="size-4 shrink-0 text-yellow-500 md:size-5" key={index} />
               ))}
             </CardHeader>
-            <blockquote>
+            <blockquote className="mt-3">
               <p className="text-sm md:text-base">
                 Direct LS is one of the best service providers our organization has had the pleasure of using. As an
                 organization, we needed an entire overhaul to our out dated computer. We are pleased and confident in
@@ -37,12 +37,13 @@ export const Testimonials = () => {
             </blockquote>
           </CardContent>
           <CardFooter>
-            <div>
-              <cite className="not-italic">
-                <h3 className="font-semibold text-sm md:text-base">Stephen Shaw</h3>
-                <p className="text-muted-foreground text-xs md:text-sm">Surrey</p>
-              </cite>
-            </div>
+            <cite className="not-italic">
+              <h3 className="font-medium text-sm md:text-base">Stephen Shaw</h3>
+              <p className="text-muted-foreground text-xs md:text-sm">Surrey</p>
+            </cite>
+            <Button size="icon" variant="secondary">
+              <IconArrowUpRight aria-hidden="true" />
+            </Button>
           </CardFooter>
         </Card>
       </div>
