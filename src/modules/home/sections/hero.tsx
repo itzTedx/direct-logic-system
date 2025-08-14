@@ -25,13 +25,14 @@ export const Hero = () => {
             reliability, and growth for your business.
           </p>
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <Button aria-label="Contact us to discuss your technology needs" className="w-full sm:w-auto">
+            <Button aria-label="Contact us to discuss your technology needs" className="w-full sm:w-auto" size="lg">
               <div className="size-5 rounded-full bg-accent" />
               Talk to us
             </Button>
             <Button
               aria-label="View our portfolio of successful projects"
               className="w-full sm:w-auto"
+              size="lg"
               variant="outline"
             >
               View Portfolio

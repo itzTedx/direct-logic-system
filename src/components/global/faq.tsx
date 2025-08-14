@@ -11,7 +11,7 @@ import { Button } from "../ui/button";
 
 export const Faq = () => {
   return (
-    <section aria-labelledby="faq-heading" className="mx-4 rounded-t-4xl bg-white py-12 md:mx-6 md:py-16 lg:py-20">
+    <section aria-labelledby="faq-heading" className="mx-4 rounded-t-4xl bg-white pt-12 md:mx-6 md:pt-16 lg:pt-20">
       <div className="container max-w-7xl px-4 md:px-6 lg:px-8">
         <SectionHeader
           badge="Frequently Asked Question"
@@ -21,9 +21,9 @@ export const Faq = () => {
         />
         <Accordion
           aria-labelledby="faq-heading"
-          className="mt-6 w-full space-y-2"
+          className="mt-9 w-full space-y-2"
           collapsible
-          defaultValue="3"
+          defaultValue="1"
           type="single"
         >
           {FAQ_ITEMS.map((item) => (
