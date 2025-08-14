@@ -1,6 +1,7 @@
 import { Badge, BadgeDot } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+import { IconCloud, IconGear, IconGlobe, IconLoudspeaker } from "@/assets/icons/system";
 import { IconDirectWatermark } from "@/assets/logo";
 
 export const Cta = () => {
@@ -9,7 +10,7 @@ export const Cta = () => {
       aria-labelledby="cta-heading"
       className="relative mx-4 rounded-b-4xl bg-gradient-to-b from-50% from-white to-50% to-transparent py-12 md:mx-6 md:py-16 lg:py-20"
     >
-      <div className="container relative inset-shadow-[0_1px_42px_0] inset-shadow-white/25 z-10 max-w-7xl space-y-4 overflow-hidden rounded-4xl bg-radial-[at_50%_0%] from-sky-400 to-primary px-4 py-12 text-center text-background md:space-y-6 md:px-6 md:py-16 lg:px-8 lg:py-20">
+      <div className="container relative inset-shadow-[0_1px_42px_0] inset-shadow-white/25 z-10 max-w-7xl space-y-4 overflow-hidden rounded-4xl bg-radial-[105%_100%_at_50%_0%] from-[#6DA3FF] via-55% via-secondary to-primary px-4 py-12 text-center text-background md:space-y-6 md:px-6 md:py-16 lg:px-8 lg:py-20">
         <Badge className="relative z-10">
           <BadgeDot />
           What we offer
@@ -33,6 +34,24 @@ export const Cta = () => {
           aria-hidden="true"
           className="-bottom-1/2 -right-20 -scale-x-90 absolute hidden text-white/8 lg:block"
         />
+        <div className="absolute inset-24 flex flex-col justify-between">
+          <div className="flex items-center justify-between">
+            <div className="flex size-20 rotate-9 items-center justify-center rounded-2xl bg-card shadow-[0_8px_24px_0] shadow-primary-background/30">
+              <IconCloud />
+            </div>
+            <div className="-rotate-12 flex size-20 items-center justify-center rounded-2xl bg-card shadow-[0_8px_24px_0] shadow-primary-background/30">
+              <IconGlobe />
+            </div>
+          </div>
+          <div className="flex items-center justify-between px-16">
+            <div className="-rotate-9 flex size-20 items-center justify-center rounded-2xl bg-card shadow-[0_8px_24px_0] shadow-primary-background/30">
+              <IconLoudspeaker />
+            </div>
+            <div className="flex size-20 rotate-6 items-center justify-center rounded-2xl bg-card shadow-[0_8px_24px_0] shadow-primary-background/30">
+              <IconGear />
+            </div>
+          </div>
+        </div>
       </div>
       <div aria-hidden="true" className="absolute top-1/2 h-8 w-full rounded-b-full bg-white" />
     </section>

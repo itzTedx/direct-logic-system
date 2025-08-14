@@ -11,7 +11,7 @@ export const Footer = () => {
       {/* Top section with logo and social media */}
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 sm:flex-row sm:gap-0">
         <div className="flex items-center gap-2">
-          <IconLogo aria-hidden="true" />
+          <IconLogo aria-hidden="true" className="text-primary" />
           <LogoWordmark aria-label="Direct Logic Systems" />
         </div>
         <div className="flex flex-col items-center gap-3 sm:flex-row">
@@ -73,7 +73,8 @@ export const Footer = () => {
       <div className="mx-auto mb-16 grid max-w-7xl grid-cols-1 gap-8 sm:mb-24 md:mb-44 lg:mb-72 lg:grid-cols-2 lg:gap-12">
         <div>
           <h2 className="mb-8 text-pretty text-3xl leading-tight tracking-tight sm:text-4xl lg:mb-12 lg:text-5xl">
-            Don't settle for good, let's go for amazing, together
+            Don't settle for good, <br />
+            let's go for amazing, together
           </h2>
           <address className="text-lg text-muted-foreground not-italic leading-relaxed">
             <p>
@@ -175,7 +176,7 @@ export const Footer = () => {
                   className="rounded transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                   href="mailto:info@directls.ae"
                 >
-                  info@directls.ae
+                  sales@directls.ae
                 </a>
               </li>
             </ul>

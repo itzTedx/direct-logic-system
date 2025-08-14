@@ -1,16 +1,19 @@
-import { Badge, BadgeDot } from "../ui/badge";
+import { VariantProps } from "class-variance-authority";
+
+import { Badge, BadgeDot, badgeVariants } from "../ui/badge";
 
 interface Props {
   title: string;
   description: string;
   badge: string;
+  variant?: VariantProps<typeof badgeVariants>["variant"];
 }
 
-export const SectionHeader = ({ title, description, badge }: Props) => {
+export const SectionHeader = ({ title, description, badge, variant }: Props) => {
   return (
     <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 md:items-center md:gap-6 lg:gap-12">
       <div className="space-y-2">
-        <Badge>
+        <Badge variant={variant}>
           <BadgeDot />
           {badge}
         </Badge>
