@@ -3,13 +3,13 @@ import Image from "next/image";
 import { SectionHeader } from "@/components/layout/section-header";
 import { Badge, BadgeDot } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { BackgroundLeft, BackgroundRight } from "@/assets/background";
-import { IconArrowUpRight, IconCheck } from "@/assets/icons/arrows";
+import { IconArrowUpRight } from "@/assets/icons/arrows";
+import { IconStar } from "@/assets/icons/star";
 
-import { CASE_STUDIES, FEATURED_PROJECTS, PORTFOLIO_TESTIMONIALS } from "@/data/portfolio";
+import { FEATURED_PROJECTS, PORTFOLIO_TESTIMONIALS } from "@/data/portfolio";
 
 export default function PortfolioPage() {
   return (
@@ -75,7 +75,7 @@ export default function PortfolioPage() {
         </div>
       </section>
       {/* Case Studies Section */}
-      <section aria-labelledby="case-studies-heading" className="bg-muted/50">
+      {/* <section aria-labelledby="case-studies-heading" className="bg-muted/50">
         <div className="container max-w-7xl px-4 py-16 md:px-6 md:py-24 lg:px-8 lg:py-32">
           <div className="mx-auto mb-12 max-w-4xl text-center">
             <Badge variant="secondary">
@@ -93,8 +93,8 @@ export default function PortfolioPage() {
 
           <div className="space-y-12">
             {CASE_STUDIES.map((caseStudy, index) => (
-              <Card className="overflow-hidden" key={caseStudy.id}>
-                <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10">
+              <Card key={caseStudy.id}>
+                <CardHeader>
                   <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                     <div>
                       <h3 className="font-semibold text-xl">{caseStudy.clientName}</h3>
@@ -130,41 +130,37 @@ export default function PortfolioPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       ;{/* Testimonials Section */}
-      <section
-        aria-labelledby="testimonials-heading"
-        className="container max-w-7xl px-4 py-16 md:px-6 md:py-24 lg:px-8 lg:py-32"
-      >
-        <div className="mx-auto mb-12 max-w-4xl text-center">
-          <Badge variant="secondary">
-            <BadgeDot />
-            What Clients Say
-          </Badge>
-          <h2 className="mt-3 font-bold text-2xl leading-tight sm:text-3xl lg:text-4xl" id="testimonials-heading">
-            Think Outside the Box
-          </h2>
-          <p className="mt-3 text-balance text-base text-muted-foreground leading-relaxed sm:text-lg">
-            Hear from our satisfied clients who trust Direct LS for IT solutions and web development.
-          </p>
-        </div>
+      <section aria-labelledby="testimonials-heading" className="container max-w-7xl py-16 md:py-24 lg:py-32">
+        <SectionHeader
+          badge="What Clients Say"
+          description="Hear from our satisfied clients who trust Direct LS for IT solutions and web development."
+          title="Think Outside the Box"
+        />
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {PORTFOLIO_TESTIMONIALS.map((testimonial) => (
-            <Card className="group transition-all duration-300 hover:shadow-lg" key={testimonial.id}>
-              <CardContent className="p-6">
-                <blockquote className="mb-4">
-                  <p className="text-muted-foreground text-sm italic">"{testimonial.content}"</p>
+        <div className="grid grid-cols-1 gap-6 pt-12 md:grid-cols-2 lg:grid-cols-3">
+          {PORTFOLIO_TESTIMONIALS.map((feedback) => (
+            <Card key={feedback.id} role="listitem">
+              <CardContent className="h-full">
+                <CardHeader aria-label="5 out of 5 stars rating" className="flex items-center gap-2" role="img">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <IconStar aria-hidden="true" className="size-4 shrink-0 text-yellow-500 md:size-5" key={index} />
+                  ))}
+                </CardHeader>
+                <blockquote className="mt-3">
+                  <p className="text-sm md:text-base">{feedback.content}</p>
                 </blockquote>
-                <Separator className="my-4" />
-                <cite className="not-italic">
-                  <h4 className="font-semibold text-sm">{testimonial.author}</h4>
-                  <p className="text-muted-foreground text-xs">
-                    {testimonial.position && `${testimonial.position}, `}
-                    {testimonial.company}
-                  </p>
-                </cite>
               </CardContent>
+              <CardFooter>
+                <cite className="not-italic">
+                  <h3 className="font-medium text-sm md:text-base">{feedback.author}</h3>
+                  <p className="text-muted-foreground text-xs md:text-sm">{feedback.company}</p>
+                </cite>
+                <Button size="icon" variant="secondary">
+                  <IconArrowUpRight aria-hidden="true" />
+                </Button>
+              </CardFooter>
             </Card>
           ))}
         </div>
