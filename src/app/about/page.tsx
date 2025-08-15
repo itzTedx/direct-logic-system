@@ -115,22 +115,6 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="container max-w-7xl px-4 pt-12 sm:pt-16 lg:pt-20" id="clients">
-        <SectionHeader
-          badge="Clients"
-          description="Ethics you can count on—anytime, at Direct Logic Systems."
-          title="Our satisfied customers"
-        />
-        <div className="grid grid-cols-2 gap-4 py-8 text-center sm:grid-cols-3 sm:gap-8 sm:py-12 md:grid-cols-4 md:gap-12">
-          {CLIENTS.map((value) => (
-            <div className="relative aspect-video rounded-lg bg-card" key={value.logo}>
-              <Image alt="Client" className="object-contain p-6" fill src={value.logo} />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Values Section */}
       <section className="container max-w-7xl px-4 py-12 sm:py-16 lg:py-20">
         <SectionHeader
           badge="Values"
@@ -211,6 +195,22 @@ export default function AboutPage() {
               </ul>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="container max-w-7xl px-4 pt-12 sm:pt-16 lg:pt-20" id="clients">
+        <SectionHeader
+          badge="Clients"
+          description="Ethics you can count on—anytime, at Direct Logic Systems."
+          title="Our satisfied customers"
+        />
+        <div className="grid grid-cols-2 gap-4 py-8 text-center sm:grid-cols-3 sm:gap-8 sm:py-12 md:grid-cols-4 md:gap-12">
+          {CLIENTS.map((value) => (
+            <div className="relative aspect-video rounded-lg bg-card" key={value.logo}>
+              <Image alt="Client" className="object-contain p-6" fill src={value.logo} />
+            </div>
+          ))}
         </div>
       </section>
 
