@@ -62,7 +62,8 @@ export default async function WhatWeOfferPage() {
                 />
                 <div className="grid grid-cols-1 gap-3 py-14 md:grid-cols-2 lg:grid-cols-3">
                   {displayedServices.map((service) => (
-                    <Card className="group transition-all duration-300 hover:shadow-lg" key={service.id}>
+                    <Card className="group relative transition-all duration-300 hover:shadow-lg" key={service.id}>
+                      <Link className="absolute inset-0 z-10" href={`/what-we-offer/${category.id}/${service.slug}`} />
                       <CardContent className="flex h-full flex-col p-1">
                         {service.image && (
                           <div className="relative flex aspect-4/3 items-center justify-center overflow-hidden rounded-md bg-muted">
@@ -77,10 +78,8 @@ export default async function WhatWeOfferPage() {
                       <CardFooter className="flex items-center justify-between px-2 pb-1">
                         <CardTitle className="text-muted-foreground text-sm">Explore</CardTitle>
 
-                        <Button asChild size="icon" variant="secondary">
-                          <Link href={`/what-we-offer/${category.id}/${service.slug}`}>
-                            <IconArrowUpRight />
-                          </Link>
+                        <Button size="icon" variant="secondary">
+                          <IconArrowUpRight />
                         </Button>
                       </CardFooter>
                     </Card>

@@ -9,6 +9,14 @@ export const IconArrowUpRight = (props: SVGProps) => {
   );
 };
 
+export const IconArrowUp = (props: SVGProps) => {
+  return (
+    <svg {...props} fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="currentColor" />
+    </svg>
+  );
+};
+
 export const IconArrowLeft = (props: SVGProps) => {
   return (
     <svg {...props} fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
