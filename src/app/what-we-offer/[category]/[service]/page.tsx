@@ -39,7 +39,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
 
       {/* Service Content Section */}
-      <section className="container relative z-10 max-w-7xl space-y-12 pt-6 pb-20">
+      <section className="container relative z-10 max-w-7xl space-y-6 pt-6 pb-20 lg:space-y-12">
         {metadata.image && (
           <div className="relative aspect-16/6 w-full overflow-hidden rounded-2xl">
             <Image alt={metadata.title} className="object-cover" fill src={metadata.image} />
@@ -51,7 +51,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Main Content */}
 
-          <article className="prose prose-lg lg:col-span-2">
+          <article className="prose prose-lg order-2 lg:order-1 lg:col-span-2">
             <MDXContent
               components={{
                 Image: (props) => <Image {...props} className="rounded-md" />,
@@ -61,7 +61,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
             />
           </article>
 
-          <TableOfContents headings={headings} />
+          <TableOfContents className="order-1 lg:order-2" headings={headings} />
         </div>
       </section>
 

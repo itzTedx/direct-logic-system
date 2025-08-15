@@ -13,9 +13,10 @@ import { cn } from "@/lib/utils";
 
 interface TableOfContentsProps {
   headings: Heading[];
+  className?: string;
 }
 
-export function TableOfContents({ headings }: TableOfContentsProps) {
+export function TableOfContents({ headings, className }: TableOfContentsProps) {
   const [activeId, setActiveId] = useState<string>("");
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -58,7 +59,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
   }
 
   return (
-    <div className="sticky top-24 h-fit space-y-4">
+    <div className={cn("h-fit space-y-4 lg:sticky lg:top-24", className)}>
       <Card>
         <CardHeader className="gap-0 px-2">
           <CardTitle className="pb-1 font-normal text-muted-foreground text-sm">Table of Contents</CardTitle>
@@ -84,7 +85,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
 
       {/* Back to Top Button */}
       {showBackToTop && (
-        <Button className="w-full" onClick={scrollToTop} size="sm" variant="ghost">
+        <Button className="hidden w-full lg:inline-flex" onClick={scrollToTop} size="sm" variant="ghost">
           <IconArrowUp className="mr-2 h-4 w-4" />
           Back to Top
         </Button>
