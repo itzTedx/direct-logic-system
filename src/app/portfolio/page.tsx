@@ -1,6 +1,9 @@
+import Image from "next/image";
+
+import { SectionHeader } from "@/components/layout/section-header";
 import { Badge, BadgeDot } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 import { BackgroundLeft, BackgroundRight } from "@/assets/background";
@@ -12,9 +15,9 @@ export default function PortfolioPage() {
   return (
     <main id="main-content" role="main">
       {/* Hero Section */}
+      <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
+      <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
       <header className="min-h-[60vh] bg-gradient-to-b from-[#E5CAFF]/30 to-transparent" role="banner">
-        <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
-        <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
         <div className="container relative z-10 max-w-7xl px-4 pt-16 md:px-6 md:pt-24 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-4xl text-center">
             <Badge>
@@ -33,41 +36,46 @@ export default function PortfolioPage() {
           </div>
         </div>
       </header>
-
       {/* Our Case Studies / Projects Section */}
-      <section aria-labelledby="featured-projects-heading" className="container max-w-7xl px-4 py-16 md:px-6 lg:px-8">
-        <div className="mx-auto mb-12 max-w-4xl text-center">
-          <Badge variant="secondary">
-            <BadgeDot />
-            Featured Work
-          </Badge>
-          <h2 className="mt-3 font-bold text-2xl leading-tight sm:text-3xl lg:text-4xl" id="featured-projects-heading">
-            Our Case Studies / Projects
-          </h2>
-        </div>
+      <section aria-labelledby="featured-projects-heading" className="container relative z-10 max-w-7xl">
+        <SectionHeader
+          badge="Featured Work"
+          description="Dive into our diverse range of projects. From web development to IT solutions, see how we bring ideas to life and deliver results for our clients."
+          title="Our Case Studies / Projects"
+        />
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 pt-12 md:grid-cols-2 lg:grid-cols-3">
           {FEATURED_PROJECTS.map((project) => (
             <Card className="group transition-all duration-300 hover:shadow-lg" key={project.id}>
-              <div className="flex aspect-video items-center justify-center rounded-t-lg bg-muted">
-                <div className="text-muted-foreground text-sm">portfolio-image</div>
-              </div>
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="font-semibold text-lg">{project.name}</h3>
-                    <p className="mt-1 text-muted-foreground text-sm">{project.category}</p>
-                  </div>
-                  <Button className="opacity-0 transition-opacity group-hover:opacity-100" size="icon" variant="ghost">
-                    <IconArrowUpRight aria-hidden="true" />
-                  </Button>
-                </div>
+              <CardHeader className="flex items-center justify-between px-2 pb-1">
+                <CardTitle className="text-muted-foreground text-sm">{project.category}</CardTitle>
+
+                <Button size="icon" variant="secondary">
+                  <IconArrowUpRight />
+                </Button>
               </CardHeader>
+              <CardContent className="flex h-full flex-col justify-between p-1">
+                {project.image && (
+                  <div className="relative flex aspect-4/3 items-center justify-center overflow-hidden rounded-md bg-muted">
+                    <Image alt={project.name} className="object-cover" fill src={project.image} />
+                  </div>
+                )}
+                <CardHeader className="p-3">
+                  <CardTitle>{project.name}</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <ul className="flex flex-wrap gap-2 p-3">
+                  {project.tags.map((tag) => (
+                    <li className="rounded-md bg-primary-foreground/40 px-2.5 py-1 text-primary text-xs" key={tag}>
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
             </Card>
           ))}
         </div>
       </section>
-
       {/* Case Studies Section */}
       <section aria-labelledby="case-studies-heading" className="bg-muted/50">
         <div className="container max-w-7xl px-4 py-16 md:px-6 md:py-24 lg:px-8 lg:py-32">
@@ -125,8 +133,7 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
+      ;{/* Testimonials Section */}
       <section
         aria-labelledby="testimonials-heading"
         className="container max-w-7xl px-4 py-16 md:px-6 md:py-24 lg:px-8 lg:py-32"
@@ -164,8 +171,7 @@ export default function PortfolioPage() {
           ))}
         </div>
       </section>
-
-      {/* CTA Section */}
+      ;{/* CTA Section */}
       <section className="bg-primary text-primary-foreground">
         <div className="container max-w-7xl px-4 py-16 md:px-6 md:py-24 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-4xl text-center">
@@ -190,6 +196,7 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
+      ;
     </main>
   );
 }

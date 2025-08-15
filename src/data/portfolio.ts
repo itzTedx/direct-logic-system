@@ -29,6 +29,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
   {
     id: 1,
     name: "Manar Events",
+    image: "/images/portfolio/manar-events.webp",
     category: "Web Design & Development",
     description: "A comprehensive web platform for event management and coordination services.",
     tags: ["Web Design", "Development", "Event Management", "Responsive"],
@@ -36,6 +37,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
   {
     id: 2,
     name: "Almanar Furnishings",
+    image: "/images/portfolio/almanar.webp",
     category: "Web Design & Development",
     description: "Modern e-commerce website for premium furniture and home furnishings.",
     tags: ["E-commerce", "Web Design", "Furniture", "Online Store"],
@@ -43,6 +45,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
   {
     id: 3,
     name: "DMD Care",
+    image: "/images/portfolio/dmd-care.webp",
     category: "Web Design & Development",
     description: "Healthcare-focused website providing information and services for patient care.",
     tags: ["Healthcare", "Web Design", "Patient Care", "Information Portal"],
