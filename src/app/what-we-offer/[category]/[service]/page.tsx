@@ -22,7 +22,7 @@ import { BackgroundLeft, BackgroundRight } from "@/assets/background";
 
 import { BASE_URL } from "@/data/site-config";
 import { createHeadingComponents, extractHeadings } from "@/lib/mdx-utils";
-import { getServiceBySlug } from "@/modules/services/actions";
+import { getCategoriesWithMetadata, getServiceBySlug, getServicesByCategory } from "@/modules/services/actions";
 import { getCategoryMetadata } from "@/modules/services/categories";
 
 interface Params {
@@ -119,6 +119,24 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       ICBM: "25.2048, 55.2708",
     },
   };
+}
+
+export async function generateStaticParams() {
+  const categories = await getCategoriesWithMetadata();
+  const params: { category: string; service: string }[] = [];
+
+  for (const category of categories) {
+    const services = await getServicesByCategory(category.id);
+
+    for (const service of services) {
+      params.push({
+        category: category.id,
+        service: service.slug,
+      });
+    }
+  }
+
+  return params;
 }
 
 export default async function ServicePage({ params }: { params: Promise<Params> }) {

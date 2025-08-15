@@ -22,7 +22,7 @@ import { IconArrowUpRight } from "@/assets/icons/arrows";
 import { IconDirectWatermark } from "@/assets/logo";
 
 import { BASE_URL } from "@/data/site-config";
-import { getServicesByCategory } from "@/modules/services/actions";
+import { getCategoriesWithMetadata, getServicesByCategory } from "@/modules/services/actions";
 import { getCategoryMetadata } from "@/modules/services/categories";
 
 interface Params {
@@ -99,6 +99,14 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       ICBM: "25.2048, 55.2708",
     },
   };
+}
+
+export async function generateStaticParams() {
+  const categories = await getCategoriesWithMetadata();
+
+  return categories.map((category) => ({
+    category: category.id,
+  }));
 }
 
 export default async function ServicesCategoryPage({ params }: { params: Promise<Params> }) {
