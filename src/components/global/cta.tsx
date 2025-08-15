@@ -4,11 +4,20 @@ import { Button } from "@/components/ui/button";
 import { IconCloud, IconGear, IconGlobe, IconLoudspeaker } from "@/assets/icons/system";
 import { IconDirectWatermark } from "@/assets/logo";
 
-export const Cta = () => {
+import { cn } from "@/lib/utils";
+
+interface Props {
+  disableBg?: boolean;
+}
+
+export const Cta = ({ disableBg = false }: Props) => {
   return (
     <section
       aria-labelledby="cta-heading"
-      className="relative mx-2 rounded-b-3xl bg-gradient-to-b from-50% from-white to-50% to-transparent py-8 sm:mx-4 sm:rounded-b-4xl sm:py-12 md:mx-6 md:py-16 lg:py-20"
+      className={cn(
+        "relative mx-2 rounded-b-3xl bg-gradient-to-b from-50% from-white to-50% to-transparent py-8 sm:mx-4 sm:rounded-b-4xl sm:py-12 md:mx-6 md:py-16 lg:py-20",
+        disableBg && "bg-transparent"
+      )}
     >
       <div className="container relative z-10 max-w-7xl space-y-3 overflow-hidden rounded-3xl bg-radial-[105%_100%_at_50%_0%] from-[#6DA3FF] via-55% via-secondary to-primary px-3 py-8 text-center text-background shadow-[0_8px_28px_0_oklch(0.2788_0.0909_306.27/40%),_inset_0_1px_28px_8px_oklch(1_0_0_/25%)] sm:space-y-4 sm:rounded-4xl sm:px-4 sm:py-12 sm:shadow-[0_12px_42px_0_oklch(0.2788_0.0909_306.27/40%),_inset_0_1px_42px_12px_oklch(1_0_0_/25%)] md:space-y-6 md:px-6 md:py-16 lg:px-8 lg:py-20">
         <Badge className="relative z-10 text-xs sm:text-sm" variant="outline">
@@ -64,7 +73,7 @@ export const Cta = () => {
           </div>
         </div>
       </div>
-      <div aria-hidden="true" className="absolute top-1/2 h-6 w-full rounded-b-full bg-white sm:h-8" />
+      {!disableBg && <div aria-hidden="true" className="absolute top-1/2 h-6 w-full rounded-b-full bg-white sm:h-8" />}
     </section>
   );
 };

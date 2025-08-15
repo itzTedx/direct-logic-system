@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { Cta } from "@/components/global/cta";
 import { SectionHeader } from "@/components/layout/section-header";
 import { Badge, BadgeDot } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -165,32 +166,7 @@ export default function PortfolioPage() {
           ))}
         </div>
       </section>
-      ;{/* CTA Section */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="container max-w-7xl px-4 py-16 md:px-6 md:py-24 lg:px-8 lg:py-32">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-4 font-bold text-2xl leading-tight sm:text-3xl lg:text-4xl">
-              Ready to Start Your Project?
-            </h2>
-            <p className="mb-8 text-lg opacity-90">
-              Let's discuss how we can help bring your vision to life with our expertise and innovative solutions.
-            </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Button size="lg" variant="secondary">
-                Get Started
-              </Button>
-              <Button
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                size="lg"
-                variant="outline"
-              >
-                View More Work
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-      ;
+      <Cta disableBg />
     </main>
   );
 }
