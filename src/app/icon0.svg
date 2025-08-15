@@ -1,51 +1,13 @@
-<svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0.5" y="0.5" width="113" height="113" rx="19.5" fill="url(#paint0_radial_107_897)" />
-    <rect x="0.5" y="0.5" width="113" height="113" rx="19.5" stroke="url(#paint1_linear_107_897)" />
-    <path d="M33.9784 3.1084H38.5047V7.60187H33.9784V3.1084Z" fill="white" fill-opacity="0.15" />
-    <path d="M86.3899 11.977H90.916V16.4703H86.3899V11.977Z" fill="white" fill-opacity="0.15" />
-    <path d="M99.8751 20.93H104.401V25.4233H99.8751V20.93Z" fill="white" fill-opacity="0.15" />
-    <path d="M95.4081 52.1387H99.9343V56.632H95.4081V52.1387Z" fill="white" fill-opacity="0.15" />
-    <path d="M7.00796 20.93H11.5342V25.4235H7.00796V20.93Z" fill="white" fill-opacity="0.15" />
-    <path d="M20.4932 29.8823H25.0195V34.3758H20.4932V29.8823Z" fill="white" fill-opacity="0.15" />
-    <path d="M2.54102 43.1864H7.06732V47.6799H2.54102V43.1864Z" fill="white" fill-opacity="0.15" />
-    <path d="M33.9784 20.93H38.5047V25.4235H33.9784V20.93Z" fill="white" fill-opacity="0.15" />
-    <path d="M7.00796 61.139H11.5342V65.6325H7.00796V61.139Z" fill="white" fill-opacity="0.15" />
-    <path d="M20.4932 78.9606H25.0195V83.4541H20.4932V78.9606Z" fill="white" fill-opacity="0.15" />
-    <path d="M33.9784 87.9145H38.5047V92.4079H33.9784V87.9145Z" fill="white" fill-opacity="0.15" />
-    <path d="M108.893 65.5737H113.419V70.067H108.893V65.5737Z" fill="white" fill-opacity="0.15" />
-    <path d="M95.4081 74.4424H99.9343V78.9358H95.4081V74.4424Z" fill="white" fill-opacity="0.15" />
-    <path d="M104.342 87.9136H108.868V92.4069H104.342V87.9136Z" fill="white" fill-opacity="0.15" />
-    <path d="M86.3899 96.7831H90.916V101.276H86.3899V96.7831Z" fill="white" fill-opacity="0.15" />
-    <path d="M99.8751 105.736H104.401V110.229H99.8751V105.736Z" fill="white" fill-opacity="0.15" />
-    <path d="M33.9784 105.736H38.5047V110.23H33.9784V105.736Z" fill="white" fill-opacity="0.15" />
-    <g filter="url(#filter0_d_107_897)">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M100.5 56.9999C100.5 79.6804 81.616 98.0532 58.3538 97.9999L16.5 97.9061V29.6826H58.5009C73.9462 29.6826 86.4676 41.8919 86.4676 56.9521C86.4676 72.0142 73.9462 84.2235 58.5009 84.2235H30.5324V43.3652H58.5009C62.1687 43.4068 65.6718 44.8567 68.2503 47.4004C70.8289 49.9441 72.275 53.3765 72.275 56.953C72.275 60.5296 70.8289 63.962 68.2503 66.5057C65.6718 69.0494 62.1687 70.4993 58.5009 70.5409H44.5648V57.0478H51.3876V63.89H58.4991C60.3859 63.89 62.1954 63.1591 63.5296 61.8582C64.8638 60.5573 65.6133 58.7928 65.6133 56.953C65.6133 55.1133 64.8638 53.3488 63.5296 52.0479C62.1954 50.747 60.3859 50.0161 58.4991 50.0161H37.3533V77.5707H58.4991C70.1792 77.5707 79.6467 68.3411 79.6467 56.9521C79.6467 45.565 70.1773 36.3335 58.5009 36.3335H23.3191V91.2552H58.4991C77.9282 91.2552 93.6772 75.897 93.6772 56.9521C93.6772 38.0073 77.9263 22.6509 58.4972 22.6509H16.5019V16H58.4538C81.6745 16 100.5 34.3581 100.5 56.9999Z"
-            fill="white" />
-    </g>
+<svg width="122" height="122" viewBox="0 0 122 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M122 60.9999C122 94.744 94.5732 122.079 60.7877 122L0 121.86V20.357H61.0014C83.4337 20.357 101.62 38.5221 101.62 60.9288C101.62 83.3382 83.4337 101.503 61.0014 101.503H20.3804V40.714H61.0014C66.3284 40.7759 71.4162 42.9331 75.1612 46.7176C78.9062 50.5022 81.0065 55.6089 81.0065 60.9301C81.0065 66.2514 78.9062 71.3581 75.1612 75.1426C71.4162 78.9272 66.3284 81.0843 61.0014 81.1462H40.7607V61.0711H50.6701V71.2509H60.9986C63.739 71.2509 66.3672 70.1636 68.3049 68.228C70.2427 66.2925 71.3313 63.6674 71.3313 60.9301C71.3313 58.1929 70.2427 55.5677 68.3049 53.6322C66.3672 51.6967 63.739 50.6093 60.9986 50.6093H30.287V91.6052H60.9986C77.9626 91.6052 91.713 77.8733 91.713 60.9288C91.713 43.9869 77.9599 30.2523 61.0014 30.2523H9.90389V111.965H60.9986C89.2172 111.965 112.091 89.115 112.091 60.9288C112.091 32.7425 89.2144 9.89528 60.9959 9.89528H0.00274156V0H60.9329C94.6582 0 122 27.3133 122 60.9999Z"
+        fill="url(#paint0_radial_170_3)" />
     <defs>
-        <filter id="filter0_d_107_897" x="14.5" y="15" width="88" height="86" filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha" />
-            <feOffset dy="1" />
-            <feGaussianBlur stdDeviation="1" />
-            <feComposite in2="hardAlpha" operator="out" />
-            <feColorMatrix type="matrix" values="0 0 0 0 0.469231 0 0 0 0 0.0303454 0 0 0 0 0 0 0 0 0.6 0" />
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_107_897" />
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_107_897" result="shape" />
-        </filter>
-        <radialGradient id="paint0_radial_107_897" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-            gradientTransform="translate(57) rotate(90) scale(132.778 125.459)">
-            <stop offset="0.0344584" stop-color="#FD7A3D" />
-            <stop offset="0.517229" stop-color="#FC0B0B" />
-            <stop offset="1" stop-color="#BB054E" />
+        <radialGradient id="paint0_radial_170_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(61) rotate(90) scale(142.096 134.263)">
+            <stop offset="0.0344584" stop-color="#6DA3FF" />
+            <stop offset="0.517229" stop-color="#4736FF" />
+            <stop offset="1" stop-color="#9123FF" />
         </radialGradient>
-        <linearGradient id="paint1_linear_107_897" x1="56.9999" y1="-2.47827" x2="56.9999" y2="116.478"
-            gradientUnits="userSpaceOnUse">
-            <stop stop-color="#E0736C" />
-            <stop offset="1" stop-color="#ED3124" />
-        </linearGradient>
     </defs>
 </svg>

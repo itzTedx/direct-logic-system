@@ -1,8 +1,11 @@
+import Link from "next/link";
+
 import { Badge, BadgeDot } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 import { BackgroundLeft, BackgroundRight } from "@/assets/background";
 import { Client1, Client2 } from "@/assets/brands";
+import { IconPhone } from "@/assets/icons/contact";
 
 export const Hero = () => {
   return (
@@ -25,9 +28,18 @@ export const Hero = () => {
             reliability, and growth for your business.
           </p>
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <Button aria-label="Contact us to discuss your technology needs" className="w-full sm:w-auto" size="lg">
-              <div className="size-5 rounded-full bg-accent" />
-              Talk to us
+            <Button
+              aria-label="Contact us to discuss your technology needs"
+              asChild
+              className="w-full sm:w-auto"
+              size="lg"
+            >
+              <Link href="/contact">
+                <div className="flex items-center justify-center">
+                  <IconPhone className="text-primary-foreground" />
+                </div>
+                Talk to us
+              </Link>
             </Button>
             <Button
               aria-label="View our portfolio of successful projects"
@@ -35,13 +47,13 @@ export const Hero = () => {
               size="lg"
               variant="outline"
             >
-              View Portfolio
+              <Link href="/portfolio">View Portfolio</Link>
             </Button>
           </div>
         </div>
         <div
           aria-label="Direct Logic Systems showcase image"
-          className="mt-8 aspect-7/5 rounded-3xl bg-white ring-8 ring-white/40 md:rounded-s-3xl lg:mt-0"
+          className="mt-8 aspect-7/5 bg-white ring-8 ring-white/40 max-md:rounded-3xl md:rounded-s-3xl lg:mt-0"
           role="img"
         />
       </div>

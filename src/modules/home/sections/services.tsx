@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { SectionHeader } from "@/components/layout/section-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,7 +12,7 @@ export const Services = () => {
   return (
     <section
       aria-labelledby="services-heading"
-      className="container max-w-7xl space-y-8 px-4 pb-16 md:space-y-12 md:px-6 md:pb-24 lg:px-8 lg:pb-32"
+      className="container max-w-7xl space-y-8 px-4 pb-16 md:space-y-10 md:px-6 md:pb-24 lg:px-8 lg:pb-32"
     >
       <SectionHeader
         badge="What we offer"
@@ -48,9 +50,11 @@ export const Services = () => {
           </Card>
         ))}
       </div>
-      <Button aria-label="View all our services" className="w-full sm:w-auto">
-        Explore More
-      </Button>
+      <div className="flex justify-center">
+        <Button aria-label="View all our services" asChild className="w-full sm:w-auto" size="lg">
+          <Link href="/what-we-offer">Explore More</Link>
+        </Button>
+      </div>
     </section>
   );
 };

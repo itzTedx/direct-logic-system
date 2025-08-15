@@ -5,7 +5,7 @@ export const Solutions = () => {
   return (
     <section
       aria-labelledby="solutions-heading"
-      className="container max-w-7xl px-4 py-16 md:px-6 md:py-24 lg:px-8 lg:py-32"
+      className="container max-w-7xl px-4 pb-16 md:px-6 md:pb-24 lg:px-8 lg:pb-32"
     >
       <h2 className="text-center text-2xl md:text-3xl lg:text-4xl" id="solutions-heading">
         Everything you'd <span className="text-primary">need</span>

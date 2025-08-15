@@ -3,7 +3,7 @@ import { NumberCounter } from "@/components/ui/number-counter";
 
 export const About = () => {
   return (
-    <section aria-labelledby="about-heading" className="px-4 py-16 md:px-6 md:py-24 lg:px-8 lg:py-32">
+    <section aria-labelledby="about-heading" className="py-16 md:py-24 lg:py-32">
       <div className="container max-w-7xl">
         <SectionHeader
           badge="About Direct LS"
