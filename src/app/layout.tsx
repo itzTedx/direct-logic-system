@@ -9,6 +9,7 @@ import Providers from "@/components/providers";
 
 import { helvetica } from "@/assets/fonts";
 
+import { BASE_URL } from "@/data/site-config";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -38,14 +39,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://directlogicsystems.com"),
+  metadataBase: new URL(BASE_URL),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://directlogicsystems.com",
+    url: BASE_URL,
     title: "Direct Logic Systems - IT Solutions & Digital Innovation",
     description:
       "Direct Logic Systems delivers comprehensive IT solutions, trading services, and digital innovation. 40+ years of expertise in IT infrastructure, cloud solutions, security, and custom software development.",
@@ -109,8 +110,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Direct Logic Systems",
-              url: "https://directlogicsystems.com",
-              logo: "https://directlogicsystems.com/logo.png",
+              url: BASE_URL,
+              logo: `${BASE_URL}/logo.png`,
               description:
                 "Direct Logic Systems delivers comprehensive IT solutions, trading services, and digital innovation.",
               foundingDate: "1984",
