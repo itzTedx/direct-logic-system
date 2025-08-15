@@ -99,7 +99,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={cn("scroll-smooth")} lang="en">
+    <html className={cn("no-scrollbar scroll-smooth")} lang="en">
       <head>
         {/* Structured Data */}
         <script

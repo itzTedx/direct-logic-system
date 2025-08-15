@@ -152,8 +152,8 @@ export default function ContactPage() {
       />
 
       <main className="min-h-svh py-12 md:py-16 lg:py-20" role="main">
-        <BackgroundLeft aria-hidden="true" className="top-0 left-0 z-1" />
-        <BackgroundRight aria-hidden="true" className="top-0 right-0 z-1" />
+        <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
+        <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
 
         <section aria-labelledby="contact-heading" className="container relative z-10 max-w-7xl pt-8 md:pt-12">
           <SectionHeader

@@ -44,7 +44,7 @@ export const NavLinks = ({ mobile = false }: NavLinksProps) => {
   }
 
   return (
-    <ul className="flex shrink-0 items-center gap-2" role="list">
+    <ul className="hidden shrink-0 items-center gap-2 md:flex" role="list">
       {NAV_LINKS.map((link) => {
         const isActive = pathname.startsWith(link.href);
 

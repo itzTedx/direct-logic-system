@@ -7,9 +7,9 @@ import { Client1, Client2 } from "@/assets/brands";
 export const Hero = () => {
   return (
     <header className="min-h-svh bg-gradient-to-b from-[#E5CAFF]/30 to-transparent" role="banner">
-      <BackgroundLeft aria-hidden="true" className="top-0 left-0 z-1" />
-      <BackgroundRight aria-hidden="true" className="top-0 right-0 z-1" />
-      <div className="relative z-10 ml-auto grid max-w-[90rem] grid-cols-1 items-center gap-4 pt-16 pl-4 md:pt-24 md:pl-6 lg:grid-cols-2 lg:pt-32 lg:pl-8">
+      <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
+      <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
+      <div className="relative z-10 ml-auto grid max-w-[90rem] grid-cols-1 items-center gap-4 pt-24 pl-4 md:pl-6 lg:grid-cols-2 lg:pt-32 lg:pl-8">
         <div className="container max-w-3xl">
           <Badge>
             <BadgeDot />
@@ -41,7 +41,7 @@ export const Hero = () => {
         </div>
         <div
           aria-label="Direct Logic Systems showcase image"
-          className="mt-8 aspect-7/5 rounded-s-3xl bg-white ring-8 ring-white/40 lg:mt-0"
+          className="mt-8 aspect-7/5 rounded-3xl bg-white ring-8 ring-white/40 md:rounded-s-3xl lg:mt-0"
           role="img"
         />
       </div>

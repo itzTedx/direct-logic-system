@@ -193,7 +193,7 @@ export const Footer = () => {
       </div>
 
       {/* Bottom section with copyright and credits */}
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 py-3 text-center sm:flex-row sm:gap-0 sm:text-left">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 py-3 text-center max-sm:mb-0 sm:flex-row sm:gap-0 sm:text-left">
         <p className="text-sm">
           © {new Date().getFullYear()} Direct Logic Systems LLC{" "}
           <span className="text-muted-foreground">- All Rights Reserved</span>

@@ -13,8 +13,8 @@ export default function PortfolioPage() {
     <main id="main-content" role="main">
       {/* Hero Section */}
       <header className="min-h-[60vh] bg-gradient-to-b from-[#E5CAFF]/30 to-transparent" role="banner">
-        <BackgroundLeft aria-hidden="true" className="top-0 left-0 z-1" />
-        <BackgroundRight aria-hidden="true" className="top-0 right-0 z-1" />
+        <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
+        <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
         <div className="container relative z-10 max-w-7xl px-4 pt-16 md:px-6 md:pt-24 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-4xl text-center">
             <Badge>

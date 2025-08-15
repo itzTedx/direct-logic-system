@@ -1,4 +1,4 @@
-import { AccordionHeader, AccordionTrigger } from "@radix-ui/react-accordion";
+import { Accordion as AccordionPrimitive } from "radix-ui";
 
 import { SectionHeader } from "@/components/layout/section-header";
 import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion";
@@ -32,15 +32,15 @@ export const Faq = () => {
               key={item.id}
               value={item.id}
             >
-              <AccordionHeader className="flex">
-                <AccordionTrigger className="flex flex-1 items-center justify-between rounded-md py-2.5 text-left font-medium text-lg leading-6 outline-none transition-all focus-visible:ring-0 [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between rounded-md py-2.5 text-left font-medium text-lg leading-6 outline-none transition-all focus-visible:ring-0 [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0 [&[data-state=open]>svg]:rotate-180">
                   {item.title}
                   <IconPlus
                     aria-hidden="true"
                     className="pointer-events-none shrink-0 opacity-60 transition-transform duration-200"
                   />
-                </AccordionTrigger>
-              </AccordionHeader>
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="pb-2 text-base text-muted-foreground md:text-lg">
                 {item.content}
               </AccordionContent>

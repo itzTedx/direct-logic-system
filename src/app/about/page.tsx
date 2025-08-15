@@ -62,8 +62,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen">
-      <BackgroundLeft aria-hidden="true" className="top-0 left-0 z-1" />
-      <BackgroundRight aria-hidden="true" className="top-0 right-0 z-1" />
+      <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
+      <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-[#E5CAFF]/30 to-transparent pt-16 sm:pt-20">
