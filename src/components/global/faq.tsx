@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Accordion as AccordionPrimitive } from "radix-ui";
 
 import { SectionHeader } from "@/components/layout/section-header";
@@ -48,7 +50,9 @@ export const Faq = () => {
           ))}
           <div className="flex flex-1 items-center justify-between rounded-md border bg-background px-3 py-2.5 text-left font-medium text-lg leading-6 outline-none transition-all last:border-b focus-visible:ring-0 has-focus-visible:border-ring has-focus-visible:ring-[3px] has-focus-visible:ring-ring/50 md:px-4">
             <p> Let's talk about your challenges and goals.</p>
-            <Button>Get in touch</Button>
+            <Button asChild>
+              <Link href="/contact">Get in touch</Link>
+            </Button>
           </div>
         </Accordion>
       </div>
