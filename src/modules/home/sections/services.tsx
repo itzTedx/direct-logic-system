@@ -50,7 +50,7 @@ export const Services = async ({ categories }: ServicesProps) => {
                       {displayedServices.map(({ title, slug }) => (
                         <li key={slug}>
                           <Link
-                            className="rounded-md bg-primary-foreground/40 px-2.5 py-1.5 text-primary text-xs transition-colors hover:bg-primary-foreground/60"
+                            className="rounded-md bg-primary-foreground/40 px-2.5 py-1.5 font-medium text-primary text-xs transition-colors hover:bg-primary-foreground/60"
                             href={`/what-we-offer/${category.id}/${slug}`}
                           >
                             {title}
@@ -58,8 +58,8 @@ export const Services = async ({ categories }: ServicesProps) => {
                         </li>
                       ))}
                       {remainingCount > 0 && (
-                        <span className="rounded-md bg-primary-foreground/20 px-2.5 py-1 text-primary text-sm">
-                          +{remainingCount}
+                        <span className="rounded-md bg-primary-foreground/40 px-2.5 py-1.5 font-medium text-primary text-xs transition-colors hover:bg-primary-foreground/60">
+                          {remainingCount}+
                         </span>
                       )}
                     </ul>

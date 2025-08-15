@@ -1,15 +1,19 @@
+import Link from "next/link";
+
 import { VariantProps } from "class-variance-authority";
 
 import { Badge, BadgeDot, badgeVariants } from "../ui/badge";
+import { Button } from "../ui/button";
 
 interface Props {
   title: string;
   description: string;
   badge: string;
   variant?: VariantProps<typeof badgeVariants>["variant"];
+  link?: string;
 }
 
-export const SectionHeader = ({ title, description, badge, variant }: Props) => {
+export const SectionHeader = ({ title, description, badge, variant, link }: Props) => {
   return (
     <header className="relative z-10 grid grid-cols-1 items-start gap-4 md:grid-cols-2 md:items-center md:gap-6 lg:gap-12">
       <div className="space-y-2">
@@ -17,13 +21,23 @@ export const SectionHeader = ({ title, description, badge, variant }: Props) => 
           <BadgeDot />
           {badge}
         </Badge>
-        <h2 className="text-pretty font-medium text-2xl leading-tight sm:text-3xl lg:text-4xl" id="section-title">
+        <h2
+          className="max-w-md text-pretty font-medium text-2xl leading-tight sm:text-3xl lg:text-4xl"
+          id="section-title"
+        >
           {title}
         </h2>
       </div>
-      <p className="text-balance text-base text-muted-foreground leading-relaxed sm:text-lg" id="section-description">
-        {description}
-      </p>
+      <div>
+        <p className="text-balance text-base text-muted-foreground" id="section-description">
+          {description}
+        </p>
+        {link && (
+          <Button asChild className="mt-2">
+            <Link href={link}>Explore All</Link>
+          </Button>
+        )}
+      </div>
     </header>
   );
 };

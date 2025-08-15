@@ -5,8 +5,8 @@ export interface CategoryMetadata {
 }
 
 export const CATEGORIES: Record<string, CategoryMetadata> = {
-  "it-services-&-support": {
-    id: "it-services-&-support",
+  "it-solutions": {
+    id: "it-solutions",
     title: "IT Services & Support",
     description:
       "From strategic IT consulting to reliable infrastructure and fast 2-hour on-site support, we keep your systems secure and efficient.",
@@ -18,8 +18,8 @@ export const CATEGORIES: Record<string, CategoryMetadata> = {
     description:
       "Source electronics, IT equipment, and industrial products from trusted global suppliers with quality assurance and competitive pricing.",
   },
-  "software-&-marketing": {
-    id: "software-&-marketing",
+  "software-marketing": {
+    id: "software-marketing",
     title: "Software & Digital Marketing",
     description:
       "Custom software development, modern web solutions, and data-driven marketing campaigns to boost your digital presence and business growth.",

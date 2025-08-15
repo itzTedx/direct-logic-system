@@ -51,13 +51,14 @@ export default async function WhatWeOfferPage() {
           categories.map(async (category) => {
             const categoryServices = await getServicesByCategory(category.id);
             const displayedServices = categoryServices.slice(0, 6); // Limit to 4 services
-            console.log(displayedServices);
+
             return (
               <section className="container max-w-7xl pt-14" key={category.id}>
                 <SectionHeader
                   badge={category.title}
                   description={category.description}
-                  title={`${category.title} Solutions`}
+                  link={`/what-we-offer/${category.id}`}
+                  title={category.title}
                 />
                 <div className="grid grid-cols-1 gap-3 py-14 md:grid-cols-2 lg:grid-cols-3">
                   {displayedServices.map((service) => (
@@ -77,11 +78,7 @@ export default async function WhatWeOfferPage() {
                         <CardTitle className="text-muted-foreground text-sm">Explore</CardTitle>
 
                         <Button asChild size="icon" variant="secondary">
-                          <Link
-                            href={`/what-we-offer/${category.id}/${service.slug}`}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                          >
+                          <Link href={`/what-we-offer/${category.id}/${service.slug}`}>
                             <IconArrowUpRight />
                           </Link>
                         </Button>
