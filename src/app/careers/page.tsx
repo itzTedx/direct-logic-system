@@ -8,8 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 import { BackgroundLeft, BackgroundRight } from "@/assets/background";
 import { IconAtSign2 } from "@/assets/icons/contact";
-import { IconGlobe, IconSettings } from "@/assets/icons/system";
-import { IconHeart, IconInnovation } from "@/assets/icons/values";
+import { IconGlobe2, IconHeart, IconInnovation, IconSettings2 } from "@/assets/icons/values";
 
 import { BASE_URL } from "@/data/site-config";
 import { CareersForm } from "@/modules/careers/components/careers-form";
@@ -88,12 +87,12 @@ export const metadata: Metadata = {
 
 const COMPANY_VALUES = [
   {
-    icon: IconSettings,
+    icon: IconSettings2,
     title: "Integrity",
     description: "We uphold the highest standards of honesty and ethical behavior in all our interactions.",
   },
   {
-    icon: IconGlobe,
+    icon: IconGlobe2,
     title: "Respect",
     description: "We value diversity and treat everyone with dignity, fairness, and mutual respect.",
   },
@@ -108,7 +107,7 @@ const COMPANY_VALUES = [
     description: "We embrace creativity and continuous improvement to drive technological advancement.",
   },
   {
-    icon: IconSettings,
+    icon: IconSettings2,
     title: "Courage",
     description: "We take calculated risks and face challenges with determination and resilience.",
   },
