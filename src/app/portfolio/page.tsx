@@ -17,7 +17,7 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
       <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
-      <header className="min-h-[60vh] bg-gradient-to-b from-[#E5CAFF]/30 to-transparent" role="banner">
+      <header className="bg-gradient-to-b from-[#E5CAFF]/30 to-transparent" role="banner">
         <div className="container relative z-10 max-w-7xl px-4 pt-16 md:px-6 md:pt-24 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-4xl text-center">
             <Badge>
@@ -25,11 +25,9 @@ export default function PortfolioPage() {
               Our Work Speaks
             </Badge>
             <h1 className="mt-3 font-bold text-3xl leading-[1.15] md:text-4xl lg:text-5xl">
-              Explore the
-              <br />
-              <span className="text-primary">Experience</span>
+              Explore the <span className="text-primary">Experience</span>
             </h1>
-            <p className="mt-3 mb-6 text-balance text-base text-muted-foreground leading-relaxed md:text-lg">
+            <p className="mt-3 text-balance text-base text-muted-foreground leading-relaxed md:text-lg">
               Dive into our diverse range of projects. From web development to IT solutions, see how we bring ideas to
               life and deliver results for our clients.
             </p>
@@ -37,11 +35,11 @@ export default function PortfolioPage() {
         </div>
       </header>
       {/* Our Case Studies / Projects Section */}
-      <section aria-labelledby="featured-projects-heading" className="container relative z-10 max-w-7xl">
+      <section aria-labelledby="featured-projects-heading" className="container relative z-10 max-w-7xl pt-20">
         <SectionHeader
           badge="Featured Work"
-          description="Dive into our diverse range of projects. From web development to IT solutions, see how we bring ideas to life and deliver results for our clients."
-          title="Our Case Studies / Projects"
+          description="A selection of our standout projects, showcasing the creativity, precision, and problem-solving we bring to every client partnership."
+          title="Projects That Define Our Craft"
         />
 
         <div className="grid grid-cols-1 gap-6 pt-12 md:grid-cols-2 lg:grid-cols-3">

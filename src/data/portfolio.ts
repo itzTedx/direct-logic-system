@@ -53,6 +53,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
   {
     id: 4,
     name: "Kursii",
+    image: "/images/portfolio/kursii.webp",
     category: "Web Design & Development",
     description: "Innovative platform for educational services and learning management.",
     tags: ["Education", "Web Design", "Learning Platform", "E-learning"],
@@ -60,6 +61,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
   {
     id: 5,
     name: "Abhath UAE",
+    image: "/images/portfolio/abhath.webp",
     category: "Web Design & Development",
     description: "Research and development company website showcasing innovation and expertise.",
     tags: ["Research", "Web Design", "Innovation", "Corporate"],
