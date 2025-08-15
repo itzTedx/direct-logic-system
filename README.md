@@ -110,32 +110,52 @@ src/
 
 ## 📝 Available Scripts
 
-- `pnpm dev` - Start development server with Turbopack
-- `pnpm build` - Build for production with Turbopack
-- `pnpm start` - Start production server
-- `pnpm lint` - Run Biome linter
-- `pnpm lint:fix` - Fix linting issues automatically
-- `pnpm format` - Format code with Biome
+[![pnpm](https://img.shields.io/badge/pnpm-Recommended-orange?style=flat-square&logo=pnpm)](https://pnpm.io/)
+[![npm](https://img.shields.io/badge/npm-Supported-red?style=flat-square&logo=npm)](https://www.npmjs.com/)
+
+| Script | Description | Status |
+|--------|-------------|--------|
+| `pnpm dev` | Start development server with Turbopack | ![Dev](https://img.shields.io/badge/Status-Ready-brightgreen?style=flat-square) |
+| `pnpm build` | Build for production with Turbopack | ![Build](https://img.shields.io/badge/Status-Ready-brightgreen?style=flat-square) |
+| `pnpm start` | Start production server | ![Start](https://img.shields.io/badge/Status-Ready-brightgreen?style=flat-square) |
+| `pnpm lint` | Run Biome linter | ![Lint](https://img.shields.io/badge/Status-Ready-brightgreen?style=flat-square) |
+| `pnpm lint:fix` | Fix linting issues automatically | ![Lint Fix](https://img.shields.io/badge/Status-Ready-brightgreen?style=flat-square) |
+| `pnpm format` | Format code with Biome | ![Format](https://img.shields.io/badge/Status-Ready-brightgreen?style=flat-square) |
 
 ## 🛠 Tech Stack
 
 ### Core Framework
+![Next.js](https://img.shields.io/badge/Next.js-15.4.6-black?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-19.1.0-blue?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+
 - **Next.js 15.4.6** - React framework with App Router
 - **React 19.1.0** - UI library
 - **TypeScript 5** - Type safety
 
 ### Styling & UI
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.11-38B2AC?style=flat-square&logo=tailwind-css)
+![Radix UI](https://img.shields.io/badge/Radix_UI-161618?style=flat-square&logo=radix-ui)
+![Lucide React](https://img.shields.io/badge/Lucide_React-000000?style=flat-square&logo=lucide)
+
 - **Tailwind CSS 4.1.11** - Utility-first CSS framework
 - **Radix UI** - Accessible UI primitives
 - **Lucide React** - Icon library
 - **Motion** - Animation library
 
 ### Forms & Validation
+![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=flat-square&logo=react-hook-form)
+![Zod](https://img.shields.io/badge/Zod-3B82F6?style=flat-square&logo=zod)
+
 - **React Hook Form** - Form state management
 - **Zod** - Schema validation
 - **@hookform/resolvers** - Form validation integration
 
 ### Development Tools
+![Biome](https://img.shields.io/badge/Biome-2.1.4-000000?style=flat-square&logo=biome)
+![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-000000?style=flat-square&logo=turbopack)
+![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?style=flat-square&logo=postcss)
+
 - **Biome** - Fast linter and formatter
 - **Turbopack** - Fast bundler for development
 - **PostCSS** - CSS processing
@@ -184,12 +204,21 @@ src/
 
 ## 📱 Responsive Design
 
+![Desktop](https://img.shields.io/badge/Desktop-1200px%2B-blue?style=flat-square)
+![Tablet](https://img.shields.io/badge/Tablet-768px%20%2D%201199px-green?style=flat-square)
+![Mobile](https://img.shields.io/badge/Mobile-320px%20%2D%20767px-orange?style=flat-square)
+
 The application is fully responsive and optimized for:
 - **Desktop** (1200px+)
 - **Tablet** (768px - 1199px)
 - **Mobile** (320px - 767px)
 
 ## ♿ Accessibility
+
+![WCAG 2.1 AA](https://img.shields.io/badge/WCAG-2.1%20AA-4CAF50?style=flat-square)
+![ARIA](https://img.shields.io/badge/ARIA-Supported-4CAF50?style=flat-square)
+![Keyboard Nav](https://img.shields.io/badge/Keyboard%20Navigation-Yes-4CAF50?style=flat-square)
+![Screen Reader](https://img.shields.io/badge/Screen%20Reader-Compatible-4CAF50?style=flat-square)
 
 - WCAG 2.1 AA compliant
 - Proper ARIA attributes
@@ -198,6 +227,11 @@ The application is fully responsive and optimized for:
 - High contrast support
 
 ## 🚀 Performance
+
+![Lighthouse](https://img.shields.io/badge/Lighthouse-95%2B-4CAF50?style=flat-square)
+![Core Web Vitals](https://img.shields.io/badge/Core%20Web%20Vitals-Optimized-4CAF50?style=flat-square)
+![Bundle Size](https://img.shields.io/badge/Bundle%20Size-Optimized-4CAF50?style=flat-square)
+![Image Optimization](https://img.shields.io/badge/Image%20Optimization-WebP%2F%20AVIF-4CAF50?style=flat-square)
 
 - **Lighthouse Score**: 95+ across all metrics
 - **Core Web Vitals**: Optimized for all metrics
@@ -210,6 +244,10 @@ This project is private and proprietary to Direct Logic Systems.
 
 ## 🤝 Contact
 
+[![Website](https://img.shields.io/badge/Website-Direct%20Logic%20Systems-blue?style=flat-square)](https://directls.com)
+[![Location](https://img.shields.io/badge/Location-UAE-red?style=flat-square)](https://en.wikipedia.org/wiki/United_Arab_Emirates)
+[![Services](https://img.shields.io/badge/Services-IT%20%7C%20Trading%20%7C%20Software%20%7C%20Marketing-green?style=flat-square)](https://directls.com)
+
 For more information about Direct Logic Systems:
 - **Website**: [Direct Logic Systems](https://directls.com)
 - **Location**: UAE
@@ -217,4 +255,5 @@ For more information about Direct Logic Systems:
 
 ---
 
-Built with ❤️ by Direct Logic Systems team
+[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square)](https://directls.com)
+Built with ❤️ by [Ziron Media](https://www.zironmedia.com)
