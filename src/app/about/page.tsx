@@ -90,10 +90,10 @@ export default function AboutPage() {
               <BadgeDot />
               Our Journey
             </Badge>
-            <h2 className="mt-4 text-center font-medium text-xl sm:text-2xl">
+            <h2 className="mt-3 font-medium text-xl sm:text-2xl">
               Empowering Growth, Building Trust – shaping solutions that help businesses thrive.
             </h2>
-            <div className="mt-6 space-y-4 text-base text-muted-foreground sm:mt-8 sm:text-lg">
+            <div className="mt-4 space-y-4 text-base text-muted-foreground sm:text-lg">
               <p>
                 Direct Logic Systems LLC (DLS), headquartered in Dubai, UAE, has been a trusted partner for businesses
                 for over 45 years. We provide end-to-end IT services, trading solutions, and digital services, helping

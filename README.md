@@ -255,5 +255,5 @@ For more information about Direct Logic Systems:
 
 ---
 
-[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square)](https://directls.com)
+
 Built with ❤️ by [Ziron Media](https://www.zironmedia.com)

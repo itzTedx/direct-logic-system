@@ -7,7 +7,7 @@ import { Separator } from "../ui/separator";
 
 export const Footer = () => {
   return (
-    <footer aria-label="Site footer" className="container relative space-y-6 overflow-hidden" role="contentinfo">
+    <footer aria-label="Site footer" className="container relative space-y-6 overflow-hidden pt-2" role="contentinfo">
       {/* Top section with logo and social media */}
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 sm:flex-row sm:gap-0">
         <div className="flex items-center gap-2">

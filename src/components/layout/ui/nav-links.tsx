@@ -8,22 +8,57 @@ import { motion } from "motion/react";
 import { NAV_LINKS } from "@/data/constant";
 import { cn } from "@/lib/utils";
 
-export const NavLinks = () => {
+interface NavLinksProps {
+  mobile?: boolean;
+}
+
+export const NavLinks = ({ mobile = false }: NavLinksProps) => {
   const pathname = usePathname();
 
+  if (mobile) {
+    return (
+      <ul className="flex flex-col space-y-1" role="list">
+        {NAV_LINKS.map((link) => {
+          const isActive = pathname.startsWith(link.href);
+
+          return (
+            <li key={link.id} role="none">
+              <Link
+                aria-current={isActive ? "page" : undefined}
+                className={cn(
+                  "block w-full rounded-md px-3 py-2 font-medium text-base transition-colors",
+                  "text-foreground/70 hover:bg-background/50 hover:text-foreground",
+
+                  isActive && "bg-primary/10 text-foreground"
+                )}
+                href={link.href}
+                role="menuitem"
+              >
+                {link.label}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  }
+
   return (
-    <ul className="flex shrink-0 items-center gap-2">
+    <ul className="flex shrink-0 items-center gap-2" role="list">
       {NAV_LINKS.map((link) => {
         const isActive = pathname.startsWith(link.href);
 
         return (
-          <li className="relative" key={link.id}>
+          <li className="relative" key={link.id} role="none">
             <Link
+              aria-current={isActive ? "page" : undefined}
               className={cn(
                 "relative z-10 block shrink-0 px-3 py-2 font-medium text-foreground/70 text-sm transition-colors hover:text-foreground",
+
                 isActive && "text-foreground"
               )}
               href={link.href}
+              role="menuitem"
             >
               <span className="relative z-10">{link.label}</span>
               {isActive && (
