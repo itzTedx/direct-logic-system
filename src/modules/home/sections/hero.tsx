@@ -4,8 +4,9 @@ import { Badge, BadgeDot } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 import { BackgroundLeft, BackgroundRight } from "@/assets/background";
-import { Client1, Client2 } from "@/assets/brands";
 import { IconPhone } from "@/assets/icons/contact";
+
+import { ClientsLogos } from "../components/clients-roll";
 
 export const Hero = () => {
   return (
@@ -61,33 +62,10 @@ export const Hero = () => {
         aria-labelledby="clients-heading"
         className="container mt-8 max-w-7xl px-4 text-center md:mt-12 md:px-6 lg:mt-14 lg:px-8"
       >
-        <h2 className="text-xl" id="clients-heading">
+        <h2 className="mb-3 text-xl" id="clients-heading">
           Trusted by 200+ Businesses in the UAE
         </h2>
-        <ul
-          aria-label="Our trusted clients"
-          className="mx-auto mt-6 flex max-w-fit flex-wrap items-center justify-center gap-4 md:gap-6 lg:divide-x lg:[&>li]:px-6"
-          role="list"
-        >
-          <li role="listitem">
-            <Client1 aria-label="Client logo 1" className="h-8 md:h-10 lg:h-12" />
-          </li>
-          <li role="listitem">
-            <Client2 aria-label="Client logo 2" className="h-8 md:h-10 lg:h-12" />
-          </li>
-          <li role="listitem">
-            <Client1 aria-label="Client logo 3" className="h-8 md:h-10 lg:h-12" />
-          </li>
-          <li role="listitem">
-            <Client2 aria-label="Client logo 4" className="h-8 md:h-10 lg:h-12" />
-          </li>
-          <li role="listitem">
-            <Client1 aria-label="Client logo 5" className="h-8 md:h-10 lg:h-12" />
-          </li>
-          <li role="listitem">
-            <Client2 aria-label="Client logo 6" className="h-8 md:h-10 lg:h-12" />
-          </li>
-        </ul>
+        <ClientsLogos />
       </section>
     </header>
   );

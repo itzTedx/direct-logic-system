@@ -61,19 +61,30 @@ src/
 │   ├── what-we-offer/     # Services page
 │   ├── globals.css        # Global styles
 │   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Homepage
+│   ├── page.tsx           # Homepage
+│   ├── manifest.json      # PWA manifest
+│   ├── robots.ts          # SEO robots configuration
+│   └── sitemap.ts         # Dynamic sitemap generation
 ├── components/            # Reusable components
 │   ├── global/            # Global components (CTA, FAQ)
 │   ├── layout/            # Layout components (Navbar, Footer)
-│   └── ui/                # UI components (Button, Card, etc.)
+│   ├── markdown/          # Markdown rendering components
+│   ├── ui/                # UI components (Button, Card, etc.)
+│   └── providers.tsx      # React context providers
 ├── data/                  # Static data and constants
 │   ├── constant.ts        # Services, testimonials, company info
-│   └── portfolio.ts       # Portfolio projects and case studies
+│   ├── portfolio.ts       # Portfolio projects and case studies
+│   └── site-config.ts     # Site configuration
 ├── lib/                   # Utility functions
 ├── modules/               # Feature modules
+│   ├── careers/           # Careers page logic
+│   ├── contact/           # Contact form logic
 │   ├── home/              # Homepage sections
-│   └── contact/           # Contact form logic
+│   │   └── sections/      # Individual homepage sections
+│   └── services/          # Services page logic
 ├── types/                 # TypeScript type definitions
+├── hooks/                 # Custom React hooks
+├── contents/              # Content management
 └── assets/                # Static assets (icons, fonts, images)
 ```
 
@@ -142,6 +153,8 @@ src/
 - **Radix UI** - Accessible UI primitives
 - **Lucide React** - Icon library
 - **Motion** - Animation library
+- **Class Variance Authority** - Component variant management
+- **Tailwind Merge** - Utility class merging
 
 ### Forms & Validation
 ![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=flat-square&logo=react-hook-form)
@@ -151,6 +164,14 @@ src/
 - **Zod** - Schema validation
 - **@hookform/resolvers** - Form validation integration
 
+### Content & Markdown
+![MDX](https://img.shields.io/badge/MDX-000000?style=flat-square&logo=mdx)
+![Gray Matter](https://img.shields.io/badge/Gray_Matter-000000?style=flat-square)
+
+- **next-mdx-remote** - MDX rendering
+- **gray-matter** - Front matter parsing
+- **remark-gfm** - GitHub Flavored Markdown
+
 ### Development Tools
 ![Biome](https://img.shields.io/badge/Biome-2.1.4-000000?style=flat-square&logo=biome)
 ![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-000000?style=flat-square&logo=turbopack)
@@ -159,6 +180,12 @@ src/
 - **Biome** - Fast linter and formatter
 - **Turbopack** - Fast bundler for development
 - **PostCSS** - CSS processing
+
+### Additional Libraries
+- **@bprogress/next** - Progress bar for Next.js
+- **@number-flow/react** - Number animation library
+- **react-use-measure** - Element measurement hooks
+- **tw-animate-css** - Tailwind CSS animations
 
 ## 🎯 Key Features
 
@@ -188,19 +215,32 @@ src/
 - **Kursii** - Educational learning platform
 - **Abhath UAE** - Research company website
 
+### Case Studies
+- **TechCorp Solutions** - IT infrastructure overhaul
+- **Global Retail Chain** - E-commerce platform development
+- **Healthcare Provider** - Digital transformation
+
 ## 🔧 Configuration
 
 ### Next.js Configuration
 - Turbopack enabled for faster development
 - Image optimization with WebP and AVIF formats
 - TypeScript build optimization
-- Package import optimization
+- Package import optimization for performance
+- SVG support with security policies
 
 ### Biome Configuration
 - Strict linting rules for code quality
 - Accessibility checks enabled
 - Automatic formatting on save
 - TypeScript-aware linting
+- Custom rules for React and JSX
+
+### Tailwind CSS Configuration
+- Tailwind CSS 4.1.11 with PostCSS
+- Typography plugin for rich text
+- Custom design system
+- Responsive breakpoints
 
 ## 📱 Responsive Design
 
@@ -237,6 +277,7 @@ The application is fully responsive and optimized for:
 - **Core Web Vitals**: Optimized for all metrics
 - **Bundle Size**: Optimized with tree-shaking
 - **Image Optimization**: Automatic WebP/AVIF conversion
+- **Turbopack**: Fast development builds
 
 ## 📄 License
 
@@ -254,6 +295,5 @@ For more information about Direct Logic Systems:
 - **Services**: IT Solutions, Trading, Software Development, Digital Marketing
 
 ---
-
 
 Built with ❤️ by [Ziron Media](https://www.zironmedia.com)
