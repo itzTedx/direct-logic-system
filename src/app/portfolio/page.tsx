@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Cta } from "@/components/global/cta";
 import { SectionHeader } from "@/components/layout/section-header";
@@ -49,8 +50,10 @@ export default function PortfolioPage() {
               <CardHeader className="flex items-center justify-between px-2 pb-1">
                 <CardTitle className="text-muted-foreground text-sm">{project.category}</CardTitle>
 
-                <Button size="icon" variant="secondary">
-                  <IconArrowUpRight />
+                <Button asChild size="icon" variant="secondary">
+                  <Link href={project.href || "#"} rel="noopener noreferrer" target="_blank">
+                    <IconArrowUpRight />
+                  </Link>
                 </Button>
               </CardHeader>
               <CardContent className="flex h-full flex-col justify-between p-1">

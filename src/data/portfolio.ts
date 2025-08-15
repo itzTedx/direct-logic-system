@@ -5,6 +5,7 @@ export interface PortfolioProject {
   description: string;
   image?: string;
   tags: string[];
+  href?: string;
 }
 
 export interface CaseStudy {
@@ -33,6 +34,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
     category: "Web Design & Development",
     description: "A comprehensive web platform for event management and coordination services.",
     tags: ["Web Design", "Development", "Event Management", "Responsive"],
+    href: "https://www.manarevents.com/",
   },
   {
     id: 2,
@@ -41,6 +43,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
     category: "Web Design & Development",
     description: "Modern e-commerce website for premium furniture and home furnishings.",
     tags: ["E-commerce", "Web Design", "Furniture", "Online Store"],
+    href: "http://www.almanarfurnishings.com/",
   },
   {
     id: 3,
@@ -49,6 +52,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
     category: "Web Design & Development",
     description: "Healthcare-focused website providing information and services for patient care.",
     tags: ["Healthcare", "Web Design", "Patient Care", "Information Portal"],
+    href: "https://www.dmdcare.com/",
   },
   {
     id: 4,
@@ -57,6 +61,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
     category: "Web Design & Development",
     description: "Innovative platform for educational services and learning management.",
     tags: ["Education", "Web Design", "Learning Platform", "E-learning"],
+    href: "https://www.kursii.com/",
   },
   {
     id: 5,
@@ -65,6 +70,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
     category: "Web Design & Development",
     description: "Research and development company website showcasing innovation and expertise.",
     tags: ["Research", "Web Design", "Innovation", "Corporate"],
+    href: "https://www.abhathuae.com/",
   },
 ];
 

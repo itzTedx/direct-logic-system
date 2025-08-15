@@ -18,7 +18,7 @@ export const Navbar = () => {
     <header className="-translate-x-1/2 fixed top-1.5 left-1/2 z-999 mx-auto min-w-[90%] sm:top-3 lg:min-w-3xl">
       <nav
         aria-label="Main navigation"
-        className="rounded-[calc(var(--radius)+var(--spacing)_*_1)] border-card border-b bg-card/80 p-1 shadow-primary-foreground/10 shadow-xl backdrop-blur-2xl"
+        className="rounded-[calc(var(--radius)+var(--spacing)_*_1)] border-card border-b bg-background/80 p-1 shadow-primary-foreground/10 shadow-xl backdrop-blur-2xl"
         role="navigation"
       >
         <div className="flex items-center justify-between">
