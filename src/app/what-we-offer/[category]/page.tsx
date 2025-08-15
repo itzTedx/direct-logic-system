@@ -5,6 +5,14 @@ import { Cta } from "@/components/global/cta";
 import { Faq } from "@/components/global/faq";
 import { SectionHeader } from "@/components/layout/section-header";
 import { Badge, BadgeDot } from "@/components/ui/badge";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -55,6 +63,27 @@ export default async function ServicesCategoryPage({ params }: { params: Promise
       </div>
 
       <section className="container max-w-7xl pt-14">
+        {/* Breadcrumb Navigation */}
+        <Breadcrumb className="mb-6">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/">Home</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/what-we-offer">What we offer</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{categoryMetadata.title}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
         <SectionHeader
           badge={categoryMetadata.title}
           description={categoryMetadata.description}
@@ -62,7 +91,8 @@ export default async function ServicesCategoryPage({ params }: { params: Promise
         />
         <div className="grid grid-cols-1 gap-3 py-14 md:grid-cols-2 lg:grid-cols-3">
           {categoryServices.map((service) => (
-            <Card className="group transition-all duration-300 hover:shadow-lg" key={service.id}>
+            <Card className="group relative transition-all duration-300 hover:shadow-lg" key={service.id}>
+              <Link className="absolute inset-0 z-10" href={`/what-we-offer/${category}/${service.slug}`} />
               <CardContent className="flex h-full flex-col p-1">
                 {service.image && (
                   <div className="relative flex aspect-4/3 items-center justify-center overflow-hidden rounded-md bg-muted">
@@ -77,10 +107,8 @@ export default async function ServicesCategoryPage({ params }: { params: Promise
               <CardFooter className="flex items-center justify-between px-2 pb-1">
                 <CardTitle className="text-muted-foreground text-sm">Explore</CardTitle>
 
-                <Button asChild size="icon" variant="secondary">
-                  <Link href={`/what-we-offer/${category}/${service.slug}`}>
-                    <IconArrowUpRight />
-                  </Link>
+                <Button size="icon" variant="secondary">
+                  <IconArrowUpRight />
                 </Button>
               </CardFooter>
             </Card>

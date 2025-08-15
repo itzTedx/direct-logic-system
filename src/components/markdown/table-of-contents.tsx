@@ -64,16 +64,16 @@ export function TableOfContents({ headings, className }: TableOfContentsProps) {
         <CardHeader className="gap-0 px-2">
           <CardTitle className="pb-1 font-normal text-muted-foreground text-sm">Table of Contents</CardTitle>
         </CardHeader>
-        <CardContent className="p-4">
+        <CardContent className="p-3">
           <nav className="space-y-2">
-            {headings.map((heading) => (
+            {headings.map((heading, i) => (
               <Link
                 className={cn(
                   "block text-sm transition-colors hover:text-primary",
                   activeId === heading.id ? "font-medium text-primary" : "text-muted-foreground"
                 )}
                 href={`#${heading.id}`}
-                key={heading.id}
+                key={`${heading.id}-${i}`}
                 style={{ paddingLeft: `${(heading.level - 1) * 12}px` }}
               >
                 {heading.text}

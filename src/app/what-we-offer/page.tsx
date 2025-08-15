@@ -5,6 +5,14 @@ import { Cta } from "@/components/global/cta";
 import { Faq } from "@/components/global/faq";
 import { SectionHeader } from "@/components/layout/section-header";
 import { Badge, BadgeDot } from "@/components/ui/badge";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -46,6 +54,23 @@ export default async function WhatWeOfferPage() {
         />
       </div>
 
+      {/* Breadcrumb Navigation */}
+      <div className="container max-w-7xl pt-6">
+        <Breadcrumb className="mb-6">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/">Home</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>What we offer</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+      </div>
+
       {
         await Promise.all(
           categories.map(async (category) => {
@@ -78,8 +103,10 @@ export default async function WhatWeOfferPage() {
                       <CardFooter className="flex items-center justify-between px-2 pb-1">
                         <CardTitle className="text-muted-foreground text-sm">Explore</CardTitle>
 
-                        <Button size="icon" variant="secondary">
-                          <IconArrowUpRight />
+                        <Button asChild size="icon" variant="secondary">
+                          <Link href={`/what-we-offer/${category.id}/${service.slug}`}>
+                            <IconArrowUpRight />
+                          </Link>
                         </Button>
                       </CardFooter>
                     </Card>
