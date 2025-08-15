@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,11 +21,84 @@ import { BackgroundLeft, BackgroundRight } from "@/assets/background";
 import { IconArrowUpRight } from "@/assets/icons/arrows";
 import { IconDirectWatermark } from "@/assets/logo";
 
+import { BASE_URL } from "@/data/site-config";
 import { getServicesByCategory } from "@/modules/services/actions";
 import { getCategoryMetadata } from "@/modules/services/categories";
 
 interface Params {
   category: string;
+}
+
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { category } = await params;
+  const categoryMetadata = getCategoryMetadata(category);
+
+  return {
+    title: `${categoryMetadata.title} Solutions - Direct Logic Systems`,
+    description: categoryMetadata.description,
+    keywords: [
+      `${categoryMetadata.title.toLowerCase()} services Dubai`,
+      `${categoryMetadata.title.toLowerCase()} solutions UAE`,
+      `${categoryMetadata.title.toLowerCase()} Dubai`,
+      `${categoryMetadata.title.toLowerCase()} UAE`,
+      "IT services Dubai",
+      "digital solutions UAE",
+      "business technology solutions",
+      "Dubai IT company",
+      "UAE technology services",
+    ],
+    authors: [{ name: "Direct Logic Systems" }],
+    creator: "Direct Logic Systems",
+    publisher: "Direct Logic Systems",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: `/what-we-offer/${category}`,
+    },
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url: `${BASE_URL}/what-we-offer/${category}`,
+      title: ` ${categoryMetadata.title} Solutions - Direct Logic Systems`,
+      description: categoryMetadata.description,
+      siteName: "Direct Logic Systems",
+      images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: `Direct Logic Systems - ${categoryMetadata.title} Services`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: ` ${categoryMetadata.title} Solutions - Direct Logic Systems`,
+      description: categoryMetadata.description,
+      images: ["/og-image.jpg"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    other: {
+      "geo.region": "AE",
+      "geo.placename": "Dubai",
+      "geo.position": "25.2048;55.2708",
+      ICBM: "25.2048, 55.2708",
+    },
+  };
 }
 
 export default async function ServicesCategoryPage({ params }: { params: Promise<Params> }) {

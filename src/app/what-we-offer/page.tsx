@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,7 +21,80 @@ import { BackgroundLeft, BackgroundRight } from "@/assets/background";
 import { IconArrowUpRight } from "@/assets/icons/arrows";
 import { IconDirectWatermark } from "@/assets/logo";
 
+import { BASE_URL } from "@/data/site-config";
 import { getCategoriesWithMetadata, getServicesByCategory } from "@/modules/services/actions";
+
+export const metadata: Metadata = {
+  title: "IT Services & Digital Solutions - Direct Logic Systems",
+  description:
+    "Explore our comprehensive range of IT services and digital solutions in Dubai, UAE. From cloud computing and cybersecurity to custom software development and digital marketing.",
+  keywords: [
+    "IT services Dubai",
+    "digital solutions UAE",
+    "cloud computing services",
+    "cybersecurity solutions",
+    "custom software development",
+    "web development services",
+    "digital marketing Dubai",
+    "IT consulting UAE",
+    "network infrastructure",
+    "business technology solutions",
+    "Dubai IT services",
+    "UAE digital solutions",
+  ],
+  authors: [{ name: "Direct Logic Systems" }],
+  creator: "Direct Logic Systems",
+  publisher: "Direct Logic Systems",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL(BASE_URL),
+  alternates: {
+    canonical: "/what-we-offer",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: `${BASE_URL}/what-we-offer`,
+    title: "What We Offer - IT Services & Digital Solutions | Direct Logic Systems",
+    description:
+      "Explore our comprehensive range of IT services and digital solutions in Dubai, UAE. From cloud computing and cybersecurity to custom software development and digital marketing.",
+    siteName: "Direct Logic Systems",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Direct Logic Systems - IT Services & Digital Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "What We Offer - IT Services & Digital Solutions | Direct Logic Systems",
+    description: "Explore our comprehensive range of IT services and digital solutions in Dubai, UAE.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "geo.region": "AE",
+    "geo.placename": "Dubai",
+    "geo.position": "25.2048;55.2708",
+    ICBM: "25.2048, 55.2708",
+  },
+};
 
 export default async function WhatWeOfferPage() {
   const categories = await getCategoriesWithMetadata();

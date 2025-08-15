@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,6 +13,79 @@ import { IconArrowUpRight } from "@/assets/icons/arrows";
 import { IconStar } from "@/assets/icons/star";
 
 import { FEATURED_PROJECTS, PORTFOLIO_TESTIMONIALS } from "@/data/portfolio";
+import { BASE_URL } from "@/data/site-config";
+
+export const metadata: Metadata = {
+  title: "Portfolio - Our Projects & Case Studies | Direct Logic Systems",
+  description:
+    "Explore our portfolio of successful IT projects and digital solutions. From web development to enterprise software, see how we deliver innovative technology solutions for businesses in Dubai, UAE.",
+  keywords: [
+    "portfolio Dubai",
+    "IT projects UAE",
+    "web development portfolio",
+    "software development projects",
+    "digital solutions case studies",
+    "enterprise software Dubai",
+    "custom software projects",
+    "IT solutions portfolio",
+    "Dubai technology projects",
+    "UAE digital projects",
+    "business technology portfolio",
+    "successful IT implementations",
+  ],
+  authors: [{ name: "Direct Logic Systems" }],
+  creator: "Direct Logic Systems",
+  publisher: "Direct Logic Systems",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL(BASE_URL),
+  alternates: {
+    canonical: "/portfolio",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: `${BASE_URL}/portfolio`,
+    title: "Portfolio - Our Projects & Case Studies | Direct Logic Systems",
+    description:
+      "Explore our portfolio of successful IT projects and digital solutions. From web development to enterprise software, see how we deliver innovative technology solutions for businesses in Dubai, UAE.",
+    siteName: "Direct Logic Systems",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Direct Logic Systems - Portfolio & Projects",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio - Our Projects & Case Studies | Direct Logic Systems",
+    description: "Explore our portfolio of successful IT projects and digital solutions in Dubai, UAE.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "geo.region": "AE",
+    "geo.placename": "Dubai",
+    "geo.position": "25.2048;55.2708",
+    ICBM: "25.2048, 55.2708",
+  },
+};
 
 export default function PortfolioPage() {
   return (

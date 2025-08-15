@@ -13,23 +13,24 @@ import { BASE_URL } from "@/data/site-config";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Direct Logic Systems - IT Solutions & Digital Innovation",
-    template: "%s | Direct Logic Systems",
-  },
+  title: "Direct Logic Systems - Leading IT Solutions & Digital Innovation in Dubai, UAE",
+
   description:
-    "Direct Logic Systems delivers comprehensive IT solutions, trading services, and digital innovation. 40+ years of expertise in IT infrastructure, cloud solutions, security, and custom software development.",
+    "Direct Logic Systems delivers comprehensive IT solutions, trading services, and digital innovation in Dubai, UAE. 40+ years of expertise in IT infrastructure, cloud solutions, security, and custom software development.",
   keywords: [
-    "IT solutions",
-    "digital innovation",
-    "cloud computing",
-    "cybersecurity",
-    "custom software",
-    "web development",
-    "digital marketing",
+    "IT solutions Dubai",
+    "digital innovation UAE",
+    "cloud computing Dubai",
+    "cybersecurity UAE",
+    "custom software development",
+    "web development Dubai",
+    "digital marketing UAE",
     "trading solutions",
-    "IT consulting",
-    "infrastructure management",
+    "IT consulting Dubai",
+    "infrastructure management UAE",
+    "business technology solutions",
+    "Dubai IT company",
+    "UAE technology services",
   ],
   authors: [{ name: "Direct Logic Systems" }],
   creator: "Direct Logic Systems",
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: BASE_URL,
-    title: "Direct Logic Systems - IT Solutions & Digital Innovation",
+    title: "Direct Logic Systems - Leading IT Solutions & Digital Innovation in Dubai, UAE",
     description:
-      "Direct Logic Systems delivers comprehensive IT solutions, trading services, and digital innovation. 40+ years of expertise in IT infrastructure, cloud solutions, security, and custom software development.",
+      "Direct Logic Systems delivers comprehensive IT solutions, trading services, and digital innovation in Dubai, UAE. 40+ years of expertise in IT infrastructure, cloud solutions, security, and custom software development.",
     siteName: "Direct Logic Systems",
     images: [
       {
@@ -62,8 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Direct Logic Systems - IT Solutions & Digital Innovation",
-    description: "Direct Logic Systems delivers comprehensive IT solutions, trading services, and digital innovation.",
+    title: "Direct Logic Systems - Leading IT Solutions & Digital Innovation in Dubai, UAE",
+    description:
+      "Direct Logic Systems delivers comprehensive IT solutions, trading services, and digital innovation in Dubai, UAE.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -81,6 +83,12 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
     yandex: "your-yandex-verification-code",
     yahoo: "your-yahoo-verification-code",
+  },
+  other: {
+    "geo.region": "AE",
+    "geo.placename": "Dubai",
+    "geo.position": "25.2048;55.2708",
+    ICBM: "25.2048, 55.2708",
   },
 };
 
@@ -113,18 +121,35 @@ export default function RootLayout({
               url: BASE_URL,
               logo: `${BASE_URL}/logo.png`,
               description:
-                "Direct Logic Systems delivers comprehensive IT solutions, trading services, and digital innovation.",
-              foundingDate: "1984",
+                "Direct Logic Systems delivers comprehensive IT solutions, trading services, and digital innovation in Dubai, UAE.",
+              foundingDate: "1978",
               address: {
                 "@type": "PostalAddress",
-                addressCountry: "US",
+                streetAddress: "Oud Metha Road",
+                addressLocality: "Dubai",
+                addressCountry: "AE",
               },
               contactPoint: {
                 "@type": "ContactPoint",
+                telephone: "+971-4334-8774",
                 contactType: "customer service",
                 availableLanguage: "English",
+                hoursAvailable: {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                  opens: "08:00",
+                  closes: "17:00",
+                },
               },
               sameAs: ["https://linkedin.com/company/direct-logic-systems", "https://twitter.com/directlogicsys"],
+              areaServed: {
+                "@type": "Country",
+                name: "United Arab Emirates",
+              },
+              serviceArea: {
+                "@type": "City",
+                name: "Dubai",
+              },
             }),
           }}
           type="application/ld+json"
