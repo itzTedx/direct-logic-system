@@ -11,18 +11,22 @@
     "format": "biome format --write ./src"
   },
   "dependencies": {
+    "@bprogress/next": "^3.2.12",
     "@hookform/resolvers": "^5.2.1",
     "@number-flow/react": "^0.5.10",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.539.0",
     "motion": "^12.23.12",
     "next": "15.4.6",
+    "next-mdx-remote": "^5.0.0",
     "radix-ui": "latest",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.62.0",
     "react-use-measure": "^2.1.7",
+    "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.3.1",
     "zod": "^4.0.17"
   },

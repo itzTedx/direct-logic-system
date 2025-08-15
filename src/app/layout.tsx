@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import Providers from "@/components/providers";
 
 import { helvetica } from "@/assets/fonts";
 
@@ -129,18 +130,20 @@ export default function RootLayout({
         />
       </head>
       <body className={cn("antialiased", helvetica.className)}>
-        <Link
-          className="sr-only z-50 rounded-md bg-primary px-4 py-2 text-background focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:px-4 focus:py-2"
-          href="#main-content"
-        >
-          Skip to main content
-        </Link>
+        <Providers>
+          <Link
+            className="sr-only z-50 rounded-md bg-primary px-4 py-2 text-background focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:px-4 focus:py-2"
+            href="#main-content"
+          >
+            Skip to main content
+          </Link>
 
-        <Navbar />
+          <Navbar />
 
-        {children}
+          {children}
 
-        <Footer />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
