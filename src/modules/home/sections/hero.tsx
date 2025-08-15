@@ -10,7 +10,7 @@ import { ClientsLogos } from "../components/clients-roll";
 
 export const Hero = () => {
   return (
-    <header className="min-h-svh bg-gradient-to-b from-[#E5CAFF]/30 to-transparent" role="banner">
+    <header className="min-h-svh overflow-hidden bg-gradient-to-b from-[#E5CAFF]/30 to-transparent" role="banner">
       <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
       <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
       <div className="relative z-10 ml-auto grid max-w-[90rem] grid-cols-1 items-center gap-4 pt-24 pl-4 md:pl-6 lg:grid-cols-2 lg:pt-32 lg:pl-8">

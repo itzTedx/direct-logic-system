@@ -161,7 +161,7 @@ export default function CareersPage() {
         type="application/ld+json"
       />
 
-      <main className="py-12 md:py-16 lg:py-20" role="main">
+      <main className="relative overflow-hidden py-12 md:py-16 lg:py-20" role="main">
         <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
         <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
 

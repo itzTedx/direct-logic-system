@@ -90,7 +90,7 @@ export default async function Home() {
   const categories = await getCategoriesWithMetadata();
 
   return (
-    <main id="main-content" role="main">
+    <main className="relative overflow-hidden" id="main-content" role="main">
       <Hero />
 
       <About />

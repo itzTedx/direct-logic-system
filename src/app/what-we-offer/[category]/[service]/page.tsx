@@ -156,7 +156,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
   const headingComponents = createHeadingComponents();
 
   return (
-    <main className="min-h-svh pt-20">
+    <main className="relative min-h-svh overflow-hidden pt-20">
       <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
       <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
 

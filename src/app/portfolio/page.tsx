@@ -89,7 +89,7 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <main id="main-content" role="main">
+    <main className="relative overflow-hidden" id="main-content" role="main">
       {/* Hero Section */}
       <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
       <BackgroundRight aria-hidden="true" className="-top-20 -right-20 z-1 md:top-0 md:right-0" />
