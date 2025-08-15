@@ -83,7 +83,7 @@ const LogoRow = ({ logos, index, activeIndex }: LogoRowProps) => {
   return (
     <AnimatePresence>
       {isActive && (
-        <div className="absolute top-0 left-0 grid h-full w-full grid-cols-2 items-center justify-center gap-6 px-4 md:grid-cols-3 md:gap-x-4 md:px-6 lg:grid-cols-6">
+        <div className="absolute top-0 left-0 grid h-full w-full grid-cols-3 items-center justify-center gap-6 px-4 md:gap-x-4 md:px-6 lg:grid-cols-6">
           {logos.map((logo, logoIndex) => (
             <motion.div
               animate={{

@@ -60,7 +60,7 @@ export const Hero = () => {
       </div>
       <section
         aria-labelledby="clients-heading"
-        className="container mt-8 max-w-7xl px-4 text-center md:mt-12 md:px-6 lg:mt-14 lg:px-8"
+        className="container mt-8 max-w-7xl px-4 pb-36 text-center md:mt-12 md:px-6 md:pb-0 lg:mt-14 lg:px-8"
       >
         <h2 className="mb-3 text-xl" id="clients-heading">
           Trusted by 200+ Businesses in the UAE
