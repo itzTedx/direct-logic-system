@@ -15,7 +15,7 @@ export const Footer = () => {
           <LogoWordmark aria-label="Direct Logic Systems" />
         </div>
         <div className="flex flex-col items-center gap-3 sm:flex-row">
-          <h2 className="font-semibold text-lg">Follow Us</h2>
+          <h2 className="font-medium">Follow us</h2>
           <nav aria-label="Social media links">
             <ul className="flex items-center gap-3">
               <li>
@@ -198,11 +198,11 @@ export const Footer = () => {
           © {new Date().getFullYear()} Direct Logic Systems LLC{" "}
           <span className="text-muted-foreground">- All Rights Reserved</span>
         </p>
-        <p className="text-sm">
+        <p className="text-muted-foreground text-sm">
           Website Designed & Developed by{" "}
           <Link
             aria-label="Visit Ziron Media website (opens in new tab)"
-            className="rounded transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+            className="rounded text-primary-background transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
             href="https://www.zironmedia.com"
             rel="noopener noreferrer"
             target="_blank"
