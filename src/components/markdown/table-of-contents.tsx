@@ -59,7 +59,7 @@ export function TableOfContents({ headings, className }: TableOfContentsProps) {
   }
 
   return (
-    <div className={cn("h-fit space-y-4 lg:sticky lg:top-24", className)}>
+    <div className={cn("h-fit space-y-4 lg:sticky lg:top-20", className)}>
       <Card>
         <CardHeader className="gap-0 px-2">
           <CardTitle className="pb-1 font-normal text-muted-foreground text-sm">Table of Contents</CardTitle>
@@ -70,7 +70,7 @@ export function TableOfContents({ headings, className }: TableOfContentsProps) {
               <Link
                 className={cn(
                   "block text-sm transition-colors hover:text-primary",
-                  activeId === heading.id ? "font-medium text-primary" : "text-muted-foreground"
+                  activeId === heading.id ? "font-medium text-primary" : "text-foreground/90"
                 )}
                 href={`#${heading.id}`}
                 key={`${heading.id}-${i}`}
