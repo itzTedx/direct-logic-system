@@ -36,12 +36,7 @@ export const Navbar = () => {
 
           <NavLinks />
 
-          <Button
-            asChild
-            className="transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-primary focus:ring-offset-2"
-            size="lg"
-            variant="primary"
-          >
+          <Button asChild className="hidden md:inline-flex" size="lg" variant="primary">
             <Link aria-label="Contact us" href="/contact">
               Contact
             </Link>
