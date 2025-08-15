@@ -6,9 +6,16 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 import { IconArrowUpRight } from "@/assets/icons/arrows";
 
-import { SERVICES } from "@/data/constant";
+import { getCategoriesWithMetadata, getServicesByCategory } from "@/modules/services/actions";
+import { CategoryMetadata } from "@/modules/services/categories";
 
-export const Services = () => {
+interface ServicesProps {
+  categories?: CategoryMetadata[];
+}
+
+export const Services = async ({ categories }: ServicesProps) => {
+  const allCategories = categories || (await getCategoriesWithMetadata());
+
   return (
     <section
       aria-labelledby="services-heading"
@@ -24,31 +31,54 @@ export const Services = () => {
         className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3"
         role="list"
       >
-        {SERVICES.map(({ id, description, tags, title }) => (
-          <Card key={id} role="listitem">
-            <CardContent className="flex h-full flex-col justify-between gap-4">
-              <CardHeader>
-                <CardTitle>{title}</CardTitle>
-                <CardDescription>{description}</CardDescription>
-              </CardHeader>
-              <ul className="flex flex-wrap gap-2.5">
-                {tags.map((tag) => (
-                  <li className="rounded-md bg-primary-foreground/40 px-2.5 py-1 text-primary text-sm" key={tag}>
-                    {tag}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Button aria-label="Learn more about IT Services & Support" size="sm" variant="ghost">
-                Explore
-              </Button>
-              <Button size="icon" variant="secondary">
-                <IconArrowUpRight aria-hidden="true" />
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
+        {
+          await Promise.all(
+            allCategories.map(async (category) => {
+              const categoryServices = await getServicesByCategory(category.id);
+              const totalServices = categoryServices.length;
+              const displayedServices = categoryServices.slice(0, 4);
+              const remainingCount = totalServices - 4;
+
+              return (
+                <Card key={category.id} role="listitem">
+                  <CardContent className="flex h-full flex-col justify-between gap-4">
+                    <CardHeader>
+                      <CardTitle>{category.title}</CardTitle>
+                      <CardDescription>{category.description}</CardDescription>
+                    </CardHeader>
+                    <ul className="flex flex-wrap gap-2">
+                      {displayedServices.map(({ title, slug }) => (
+                        <li key={slug}>
+                          <Link
+                            className="rounded-md bg-primary-foreground/40 px-2.5 py-1.5 text-primary text-xs transition-colors hover:bg-primary-foreground/60"
+                            href={`/what-we-offer/${category.id}/${slug}`}
+                          >
+                            {title}
+                          </Link>
+                        </li>
+                      ))}
+                      {remainingCount > 0 && (
+                        <span className="rounded-md bg-primary-foreground/20 px-2.5 py-1 text-primary text-sm">
+                          +{remainingCount}
+                        </span>
+                      )}
+                    </ul>
+                  </CardContent>
+                  <CardFooter>
+                    <Button aria-label={`View all ${category.title} services`} asChild size="sm" variant="ghost">
+                      <Link href={`/what-we-offer/${category.id}`}>Explore</Link>
+                    </Button>
+                    <Button asChild size="icon" variant="secondary">
+                      <Link href={`/what-we-offer/${category.id}`}>
+                        <IconArrowUpRight aria-hidden="true" />
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              );
+            })
+          )
+        }
       </div>
       <div className="flex justify-center">
         <Button aria-label="View all our services" asChild className="w-full sm:w-auto" size="lg">

@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import { Cta } from "@/components/global/cta";
 import { Faq } from "@/components/global/faq";
 import { SectionHeader } from "@/components/layout/section-header";
@@ -9,9 +12,11 @@ import { BackgroundLeft, BackgroundRight } from "@/assets/background";
 import { IconArrowUpRight } from "@/assets/icons/arrows";
 import { IconDirectWatermark } from "@/assets/logo";
 
-import { SERVICES } from "@/data/constant";
+import { getCategoriesWithMetadata, getServicesByCategory } from "@/modules/services/actions";
 
-export default function WhatWeOfferPage() {
+export default async function WhatWeOfferPage() {
+  const categories = await getCategoriesWithMetadata();
+
   return (
     <main className="min-h-svh pt-24">
       <BackgroundLeft aria-hidden="true" className="-top-20 -left-20 z-1 md:top-0 md:left-0" />
@@ -41,74 +46,55 @@ export default function WhatWeOfferPage() {
         />
       </div>
 
-      <section className="container max-w-7xl pt-14">
-        <SectionHeader
-          badge="Integrated Technology Solutions"
-          description="With over 40 years of experience, we combine deep industry knowledge with cutting-edge technology to solve complex challenges, improve operations, and deliver measurable results."
-          title="Smarter, faster, and safer end-to-end."
-        />
-        <div className="grid grid-cols-1 gap-3 py-14 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map(({ id, description, tags, title }) => (
-            <Card key={id} role="listitem">
-              <CardContent className="flex h-full flex-col justify-between gap-4">
-                <CardHeader>
-                  <CardTitle>{title}</CardTitle>
-                  <CardDescription>{description}</CardDescription>
-                </CardHeader>
-                <ul className="flex flex-wrap gap-2.5">
-                  {tags.map((tag) => (
-                    <li className="rounded-md bg-primary-foreground/40 px-2.5 py-1 text-primary text-sm" key={tag}>
-                      {tag}
-                    </li>
+      {
+        await Promise.all(
+          categories.map(async (category) => {
+            const categoryServices = await getServicesByCategory(category.id);
+            const displayedServices = categoryServices.slice(0, 6); // Limit to 4 services
+            console.log(displayedServices);
+            return (
+              <section className="container max-w-7xl pt-14" key={category.id}>
+                <SectionHeader
+                  badge={category.title}
+                  description={category.description}
+                  title={`${category.title} Solutions`}
+                />
+                <div className="grid grid-cols-1 gap-3 py-14 md:grid-cols-2 lg:grid-cols-3">
+                  {displayedServices.map((service) => (
+                    <Card className="group transition-all duration-300 hover:shadow-lg" key={service.id}>
+                      <CardContent className="flex h-full flex-col p-1">
+                        {service.image && (
+                          <div className="relative flex aspect-4/3 items-center justify-center overflow-hidden rounded-md bg-muted">
+                            <Image alt={service.title} className="object-cover" fill src={service.image} />
+                          </div>
+                        )}
+                        <CardHeader className="p-3">
+                          <CardTitle>{service.title}</CardTitle>
+                          <CardDescription>{service.meta.description}</CardDescription>
+                        </CardHeader>
+                      </CardContent>
+                      <CardFooter className="flex items-center justify-between px-2 pb-1">
+                        <CardTitle className="text-muted-foreground text-sm">Explore</CardTitle>
+
+                        <Button asChild size="icon" variant="secondary">
+                          <Link
+                            href={`/what-we-offer/${category.id}/${service.slug}`}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <IconArrowUpRight />
+                          </Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
                   ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button aria-label="Learn more about IT Services & Support" size="sm" variant="ghost">
-                  Explore
-                </Button>
-                <Button size="icon" variant="secondary">
-                  <IconArrowUpRight aria-hidden="true" />
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      </section>
-      <section className="container max-w-7xl pt-14">
-        <SectionHeader
-          badge="Trading Solutions"
-          description="Source electronics, IT equipment, and industrial products from trusted global suppliers—on time and on budget."
-          title="Smarter, faster, and safer end-to-end."
-        />
-        <div className="grid grid-cols-1 gap-3 py-14 md:grid-cols-2 lg:grid-cols-3">
-          {[...SERVICES, ...SERVICES].map(({ id, description, tags, title }, i) => (
-            <Card key={`${id}-${i}`} role="listitem">
-              <CardContent className="flex h-full flex-col justify-between gap-4">
-                <CardHeader>
-                  <CardTitle>{title}</CardTitle>
-                  <CardDescription>{description}</CardDescription>
-                </CardHeader>
-                <ul className="flex flex-wrap gap-2.5">
-                  {tags.map((tag) => (
-                    <li className="rounded-md bg-primary-foreground/40 px-2.5 py-1 text-primary text-sm" key={tag}>
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button aria-label="Learn more about IT Services & Support" size="sm" variant="ghost">
-                  Explore
-                </Button>
-                <Button size="icon" variant="secondary">
-                  <IconArrowUpRight aria-hidden="true" />
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      </section>
+                </div>
+              </section>
+            );
+          })
+        )
+      }
+
       <Faq />
       <Cta />
     </main>
