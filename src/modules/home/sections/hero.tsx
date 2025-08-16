@@ -62,7 +62,7 @@ export const Hero = () => {
         </div>
 
         <div className="flex items-center justify-center">
-          <Image alt="" height={500} src="/images/hero-directls.svg" width={500} />
+          <Image alt="" className="size-96 md:size-[80%]" height={500} src="/images/hero-directls.svg" width={500} />
         </div>
 
         {/* <div
