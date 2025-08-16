@@ -33,12 +33,19 @@ export const Hero = () => {
             <Button
               aria-label="Contact us to discuss your technology needs"
               asChild
-              className="w-full sm:w-auto"
+              className="group w-full sm:w-auto"
               size="lg"
             >
               <Link href="/contact">
-                <div className="flex items-center justify-center">
-                  <IconPhone className="text-primary-foreground" />
+                <div className="size-6 overflow-hidden rounded-full bg-primary-foreground text-foreground duration-500 group-hover:bg-muted">
+                  <div className="-translate-x-1/2 flex w-12 duration-500 ease-in-out group-hover:translate-x-0">
+                    <span className="flex size-6">
+                      <IconPhone className="m-auto size-3" />
+                    </span>
+                    <span className="flex size-6">
+                      <IconPhone className="m-auto size-3" />
+                    </span>
+                  </div>
                 </div>
                 Talk to us
               </Link>

@@ -104,10 +104,10 @@ const LogoRow = ({ logos, index, activeIndex }: LogoRowProps) => {
               <Image
                 alt={`Client logo ${logoIndex + 1}`}
                 className="h-auto w-auto object-contain"
-                height={60}
+                height={80}
                 priority={logoIndex < 2}
                 src={logo}
-                width={120}
+                width={150}
               />
             </motion.div>
           ))}

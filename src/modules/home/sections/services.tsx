@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ArrowRight } from "lucide-react";
+
 import { SectionHeader } from "@/components/layout/section-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -81,8 +83,25 @@ export const Services = async ({ categories }: ServicesProps) => {
         }
       </div>
       <div className="flex justify-center">
-        <Button aria-label="View all our services" asChild className="w-full sm:w-auto" size="lg">
-          <Link href="/what-we-offer">Explore More</Link>
+        <Button
+          aria-label="View all our services"
+          asChild
+          className="group w-full has-[>div]:pr-3 has-[>div]:pl-5 sm:w-auto"
+          size="lg"
+        >
+          <Link href="/what-we-offer">
+            Explore More
+            <div className="size-6 overflow-hidden rounded-full border border-card bg-background/50 text-foreground duration-500 group-hover:bg-muted">
+              <div className="-translate-x-1/2 flex w-12 duration-500 ease-in-out group-hover:translate-x-0">
+                <span className="flex size-6">
+                  <ArrowRight className="m-auto size-3" />
+                </span>
+                <span className="flex size-6">
+                  <ArrowRight className="m-auto size-3" />
+                </span>
+              </div>
+            </div>
+          </Link>
         </Button>
       </div>
     </section>
